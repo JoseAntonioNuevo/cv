@@ -9,22 +9,29 @@ const languageNames: Record<Language, string> = {
   en: 'English',
   es: 'Español'
 };
+
+const languageFlags: Record<Language, string> = {
+  en: '🇬🇧',
+  es: '🇪🇸'
+};
 ---
 
 <div class="relative group">
-  <button class="flex items-center gap-2 px-4 py-2 bg-gray-200 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-200 text-gray-700 dark:text-white">
-    <span>{languageNames[currentLang]}</span>
-    <svg class="w-3 h-3 text-gray-500 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <button class="flex items-center gap-3 px-4 py-2.5 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-all duration-200 text-gray-800 dark:text-gray-200 shadow-sm hover:shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-1">
+    <span class="text-lg" role="img" aria-label={`${languageNames[currentLang]} flag`}>{languageFlags[currentLang]}</span>
+    <span class="font-medium">{languageNames[currentLang]}</span>
+    <svg class="w-4 h-4 text-gray-400 dark:text-gray-500 ml-auto transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
     </svg>
   </button>
-  <div class="absolute right-0 mt-2 w-40 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+  <div class="absolute right-0 mt-1 w-48 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
     {alternateLanguages.map(({ lang, url }) => (
       <a 
         href={url} 
-        class="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600 first:rounded-t-md last:rounded-b-md transition-colors duration-150"
+        class="flex items-center gap-3 px-4 py-3 text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 first:rounded-t-lg last:rounded-b-lg transition-colors duration-150 border-b border-gray-100 dark:border-gray-700 last:border-b-0"
       >
-        {languageNames[lang]}
+        <span class="text-lg" role="img" aria-label={`${languageNames[lang]} flag`}>{languageFlags[lang]}</span>
+        <span class="font-medium">{languageNames[lang]}</span>
       </a>
     ))}
   </div>
