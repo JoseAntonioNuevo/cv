@@ -1,13 +1,12 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+import Main from '../../components/Main.astro';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
 <Layout title="Jose Antonio Nuevo">
-	<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-	</main>
+	<Main />
 </Layout>

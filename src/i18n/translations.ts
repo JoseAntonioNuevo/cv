@@ -12,7 +12,7 @@ export const translations = {
     hero: {
       greeting: "Hello, I'm",
       role: "Full Stack Developer",
-      description: "Passionate about creating innovative web solutions",
+      description: "Experienced Tech Lead & Full Stack Developer specializing in scalable web applications. Expert in React, Next.js, TypeScript, Python, Laravel, Node.js, and modern testing practices. Proficient with PostgreSQL, Docker, and cloud deployments. Passionate about clean code, performance optimization, and delivering exceptional user experiences. Freelance developer actively seeking new opportunities to build innovative solutions.",
       downloadCV: "Download CV",
       contactMe: "Contact Me"
     },
@@ -71,7 +71,7 @@ export const translations = {
     hero: {
       greeting: "Hola, soy",
       role: "Desarrollador Full Stack",
-      description: "Apasionado por crear soluciones web innovadoras",
+      description: "Tech Lead y Desarrollador Full Stack experimentado, especializado en aplicaciones web escalables. Experto en React, Next.js, TypeScript, Python, Laravel, Node.js y prácticas modernas de testing. Dominio de PostgreSQL, Docker y despliegues en la nube. Apasionado por el código limpio, optimización del rendimiento y crear experiencias de usuario excepcionales. Desarrollador freelance buscando activamente nuevas oportunidades para construir soluciones innovadoras.",
       downloadCV: "Descargar CV",
       contactMe: "Contáctame"
     },
