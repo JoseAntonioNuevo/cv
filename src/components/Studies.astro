@@ -1,13 +1,8 @@
 ---
-import { useTranslations } from '../i18n/utils';
-import type { Language } from '../i18n/translations';
+import { useTranslations, getLangFromUrl } from '../i18n/utils';
 
-export interface Props { 
-  lang: string; 
-}
-
-const { lang = 'en' } = Astro.props;
-const t = useTranslations(lang as Language);
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 interface Study {
   degree: string;
@@ -63,11 +58,11 @@ const studies = getStudies(t);
     <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-12 text-gray-900 dark:text-white text-center">
       {t('education.title')}
     </h2>
-    
+
     <div class="relative">
       <!-- Timeline line -->
       <div class="absolute left-6 sm:left-8 md:left-1/2 transform md:-translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-blue-500 via-indigo-500 to-purple-500"></div>
-      
+
       <div class="space-y-8 sm:space-y-12">
         {studies.map((study, index) => (
           <div class={`relative flex items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} flex-col md:flex-row`}>
@@ -80,7 +75,7 @@ const studies = getStudies(t);
                 <div class="absolute inset-0 bg-blue-400 rounded-full animate-ping opacity-20"></div>
               </div>
             </div>
-            
+
             <!-- Content card -->
             <div class={`w-full md:w-5/12 ${index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'} pl-14 sm:pl-20 md:pl-0`}>
               <div class="group relative bg-white dark:bg-gray-800 p-4 sm:p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 dark:border-gray-700">
@@ -90,16 +85,16 @@ const studies = getStudies(t);
                     {study.year}
                   </span>
                 </div>
-                
+
                 <!-- Study content with logo -->
                 <div class="pt-3 sm:pt-4">
                   <div class="flex items-start gap-3 sm:gap-4 mb-3 sm:mb-4">
                     <!-- Institution logo -->
                     <div class="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-gray-100 dark:bg-gray-700 rounded-lg overflow-hidden shadow-md">
                       {study.logo ? (
-                        <img 
-                          src={study.logo} 
-                          alt={`${study.institution} logo`} 
+                        <img
+                          src={study.logo}
+                          alt={`${study.institution} logo`}
                           class="w-full h-full object-contain p-1.5 sm:p-2"
                           loading="lazy"
                         />
@@ -109,7 +104,7 @@ const studies = getStudies(t);
                         </div>
                       )}
                     </div>
-                    
+
                     <!-- Study details -->
                     <div class="flex-1">
                       <h3 class="text-base sm:text-xl font-bold text-gray-900 dark:text-white mb-1 sm:mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
@@ -123,24 +118,24 @@ const studies = getStudies(t);
                       </p>
                     </div>
                   </div>
-                  
+
                   <p class="text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed">
                     {study.description}
                   </p>
                 </div>
-                
+
                 <!-- Decorative gradient -->
                 <div class="absolute inset-0 rounded-xl bg-gradient-to-br from-blue-500/5 to-indigo-600/5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
               </div>
             </div>
-            
+
             <!-- Spacer for alternating layout -->
             <div class="hidden md:block md:w-5/12"></div>
           </div>
         ))}
       </div>
     </div>
-    
+
     <!-- Background decoration -->
     <div class="absolute inset-0 -z-10 overflow-hidden">
       <div class="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div>
@@ -153,7 +148,7 @@ const studies = getStudies(t);
   .education-section {
     @apply relative overflow-hidden;
   }
-  
+
   @keyframes pulse-subtle {
     0%, 100% {
       opacity: 1;
@@ -162,11 +157,11 @@ const studies = getStudies(t);
       opacity: 0.8;
     }
   }
-  
+
   .animate-pulse-subtle {
     animation: pulse-subtle 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
-  
+
   /* Mobile adjustments */
   @media (max-width: 768px) {
     .education-section .absolute.left-8 {

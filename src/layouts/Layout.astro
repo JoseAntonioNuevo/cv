@@ -20,10 +20,10 @@ const lang = getLangFromUrl(Astro.url);
 // SEO metadata
 const siteUrl = Astro.url.origin;
 const currentUrl = Astro.url.href;
-const description = lang === 'es' 
+const description = lang === 'es'
   ? 'Jose Antonio Nuevo - Tech Lead y Desarrollador Full Stack. Más de 10 años de experiencia creando soluciones tecnológicas innovadoras.'
   : 'Jose Antonio Nuevo - Tech Lead & Full Stack Developer. Over 10 years of experience building innovative technology solutions.';
-const ogImage = `${siteUrl}/images/profile.jpg`;
+const ogImage = `${siteUrl}/images/me.jpeg`;
 ---
 
 <!doctype html>
@@ -35,7 +35,7 @@ const ogImage = `${siteUrl}/images/profile.jpg`;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={currentUrl} />
@@ -43,14 +43,14 @@ const ogImage = `${siteUrl}/images/profile.jpg`;
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImage} />
     <meta property="og:locale" content={lang === 'es' ? 'es_ES' : 'en_US'} />
-    
+
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={currentUrl} />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={ogImage} />
-    
+
     <!-- Additional SEO -->
     <meta name="author" content="Jose Antonio Nuevo" />
     <meta name="robots" content="index, follow" />
@@ -64,7 +64,7 @@ const ogImage = `${siteUrl}/images/profile.jpg`;
       const shouldBeDark = theme === 'dark' || (!theme && prefersDark);
       document.documentElement.classList.toggle('dark', shouldBeDark);
     </script>
-    
+
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
       {
