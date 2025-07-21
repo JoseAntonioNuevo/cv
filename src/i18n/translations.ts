@@ -65,7 +65,33 @@ export const translations = {
       title: "Education",
       degree: "Degree",
       institution: "Institution",
-      period: "Period"
+      period: "Period",
+      studies: {
+        fullstackMasters: {
+          degree: "FullStack Web Masters",
+          institution: "ThreePoints - The School for Digital Business",
+          year: "2022",
+          description: "Advanced specialization in full-stack web development, focusing on modern technologies and best practices"
+        },
+        dam: {
+          degree: "Higher Degree in Multiplatform Application Development (DAM)",
+          institution: "Universitat Oberta de Catalunya (UOC)",
+          year: "2021",
+          description: "Comprehensive training in software development for multiple platforms including web, mobile, and desktop applications"
+        },
+        daw: {
+          degree: "Higher Degree in Web Application Development (DAW)",
+          institution: "Jesuïtes Bellvitge",
+          year: "2020",
+          description: "Specialized training in web application development, both front-end and back-end technologies"
+        },
+        bachillerato: {
+          degree: "Bachillerato (High School Diploma)",
+          institution: "Jesuïtes Bellvitge",
+          year: "2018",
+          description: "Scientific and technological branch with focus on mathematics and computer science"
+        }
+      }
     },
     skills: {
       title: "Skills",
@@ -181,7 +207,33 @@ export const translations = {
       title: "Educación",
       degree: "Título",
       institution: "Institución",
-      period: "Período"
+      period: "Período",
+      studies: {
+        fullstackMasters: {
+          degree: "FullStack Web Masters",
+          institution: "ThreePoints - The School for Digital Business",
+          year: "2022",
+          description: "Especialización avanzada en desarrollo web full-stack, enfocada en tecnologías modernas y mejores prácticas"
+        },
+        dam: {
+          degree: "Grado Superior en Desarrollo de Aplicaciones Multiplataforma (DAM)",
+          institution: "Universitat Oberta de Catalunya (UOC)",
+          year: "2021",
+          description: "Formación integral en desarrollo de software para múltiples plataformas incluyendo aplicaciones web, móviles y de escritorio"
+        },
+        daw: {
+          degree: "Grado Superior en Desarrollo de Aplicaciones Web (DAW)",
+          institution: "Jesuïtes Bellvitge",
+          year: "2020",
+          description: "Formación especializada en desarrollo de aplicaciones web, tecnologías front-end y back-end"
+        },
+        bachillerato: {
+          degree: "Bachillerato",
+          institution: "Jesuïtes Bellvitge",
+          year: "2018",
+          description: "Rama científica y tecnológica con enfoque en matemáticas e informática"
+        }
+      }
     },
     skills: {
       title: "Habilidades",

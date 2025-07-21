@@ -1,10 +1,149 @@
-<section id="education" class="py-16 px-4">
+---
+import { useTranslations } from '../i18n/utils';
+import type { Language } from '../i18n/translations';
+
+export interface Props { 
+  lang: string; 
+}
+
+const { lang = 'en' } = Astro.props;
+const t = useTranslations(lang as Language);
+
+interface Study {
+  degree: string;
+  institution: string;
+  year: string;
+  description: string;
+  icon: string;
+}
+
+function getStudies(t: any): Study[] {
+  return [
+    {
+      degree: t('education.studies.fullstackMasters.degree'),
+      institution: t('education.studies.fullstackMasters.institution'),
+      year: t('education.studies.fullstackMasters.year'),
+      description: t('education.studies.fullstackMasters.description'),
+      icon: '🎓'
+    },
+    {
+      degree: t('education.studies.dam.degree'),
+      institution: t('education.studies.dam.institution'),
+      year: t('education.studies.dam.year'),
+      description: t('education.studies.dam.description'),
+      icon: '💻'
+    },
+    {
+      degree: t('education.studies.daw.degree'),
+      institution: t('education.studies.daw.institution'),
+      year: t('education.studies.daw.year'),
+      description: t('education.studies.daw.description'),
+      icon: '🌐'
+    },
+    {
+      degree: t('education.studies.bachillerato.degree'),
+      institution: t('education.studies.bachillerato.institution'),
+      year: t('education.studies.bachillerato.year'),
+      description: t('education.studies.bachillerato.description'),
+      icon: '📚'
+    }
+  ];
+}
+
+const studies = getStudies(t);
+---
+
+<section id="education" class="education-section py-16 px-4">
   <div class="max-w-6xl mx-auto">
-    <h2 class="text-3xl md:text-4xl font-bold mb-8 text-gray-900 dark:text-white text-center">
-      Education
+    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-gray-900 dark:text-white text-center">
+      {t('education.title')}
     </h2>
-    <div class="text-center text-gray-600 dark:text-gray-400">
-      <p>Education section coming soon...</p>
+    
+    <div class="relative">
+      <!-- Timeline line -->
+      <div class="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-blue-500 via-indigo-500 to-purple-500"></div>
+      
+      <div class="space-y-12">
+        {studies.map((study, index) => (
+          <div class={`relative flex items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} flex-col md:flex-row`}>
+            <!-- Timeline dot -->
+            <div class="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 -translate-y-4 md:translate-y-0">
+              <div class="relative">
+                <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center shadow-lg animate-pulse-subtle">
+                  <span class="text-lg">{study.icon}</span>
+                </div>
+                <div class="absolute inset-0 bg-blue-400 rounded-full animate-ping opacity-20"></div>
+              </div>
+            </div>
+            
+            <!-- Content card -->
+            <div class={`w-full md:w-5/12 ${index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'} pl-20 md:pl-0`}>
+              <div class="group relative bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 dark:border-gray-700">
+                <!-- Year badge -->
+                <div class={`absolute -top-3 ${index % 2 === 0 ? 'md:right-6' : 'md:left-6'} left-6`}>
+                  <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-semibold bg-gradient-to-r from-blue-500 to-indigo-600 text-white shadow-md">
+                    {study.year}
+                  </span>
+                </div>
+                
+                <!-- Study content -->
+                <div class="pt-4">
+                  <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                    {study.degree}
+                  </h3>
+                  <p class="text-lg text-indigo-600 dark:text-indigo-400 font-medium mb-3 flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                    </svg>
+                    {study.institution}
+                  </p>
+                  <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                    {study.description}
+                  </p>
+                </div>
+                
+                <!-- Decorative gradient -->
+                <div class="absolute inset-0 rounded-xl bg-gradient-to-br from-blue-500/5 to-indigo-600/5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+              </div>
+            </div>
+            
+            <!-- Spacer for alternating layout -->
+            <div class="hidden md:block md:w-5/12"></div>
+          </div>
+        ))}
+      </div>
+    </div>
+    
+    <!-- Background decoration -->
+    <div class="absolute inset-0 -z-10 overflow-hidden">
+      <div class="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div>
+      <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-indigo-500/10 rounded-full blur-3xl"></div>
     </div>
   </div>
 </section>
+
+<style>
+  .education-section {
+    @apply relative overflow-hidden;
+  }
+  
+  @keyframes pulse-subtle {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.8;
+    }
+  }
+  
+  .animate-pulse-subtle {
+    animation: pulse-subtle 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  /* Mobile adjustments */
+  @media (max-width: 768px) {
+    .education-section .absolute.left-8 {
+      left: 2rem;
+    }
+  }
+</style>
