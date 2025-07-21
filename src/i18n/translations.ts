@@ -105,8 +105,14 @@ export const translations = {
       githubText: "View Projects"
     },
     footer: {
-      rights: "All rights reserved",
-      madeWith: "Made with"
+      copyright: "All rights reserved",
+      madeWith: "Made with",
+      builtWith: "Built with",
+      location: "Barcelona, Spain",
+      quickLinks: "Quick Links",
+      contactInfo: "Contact Information",
+      followMe: "Follow Me",
+      backToTop: "Back to Top"
     }
   },
   es: {
@@ -215,8 +221,14 @@ export const translations = {
       githubText: "Ver Proyectos"
     },
     footer: {
-      rights: "Todos los derechos reservados",
-      madeWith: "Hecho con"
+      copyright: "Todos los derechos reservados",
+      madeWith: "Hecho con",
+      builtWith: "Construido con",
+      location: "Barcelona, España",
+      quickLinks: "Enlaces Rápidos",
+      contactInfo: "Información de Contacto",
+      followMe: "Sígueme",
+      backToTop: "Volver Arriba"
     }
   }
 } as const;
