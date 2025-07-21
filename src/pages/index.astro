@@ -1,12 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { getLangFromUrl, useTranslations } from '../i18n/utils';
-import Main from '../components/Main.astro';
-
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
 ---
 
-<Layout title="Jose Antonio Nuevo">
-	<Main />
-</Layout>
+<Layout title="Jose Antonio Nuevo" />

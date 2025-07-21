@@ -1,0 +1,37 @@
+---
+import { SiNextdotjs, SiPython, SiLaravel, SiNodedotjs, SiAstro, SiVuedotjs, SiTailwindcss, SiDocker, SiLinux, SiAmazon, SiOpenai } from 'react-icons/si';
+
+const technologies = [
+  { name: 'Next.js', Icon: SiNextdotjs },
+  { name: 'Python', Icon: SiPython },
+  { name: 'Laravel', Icon: SiLaravel },
+  { name: 'Node.js', Icon: SiNodedotjs },
+  { name: 'Astro', Icon: SiAstro },
+  { name: 'Vue.js', Icon: SiVuedotjs },
+  { name: 'Tailwind CSS', Icon: SiTailwindcss },
+  { name: 'Docker', Icon: SiDocker },
+  { name: 'Linux', Icon: SiLinux },
+  { name: 'AWS', Icon: SiAmazon },
+  { name: 'AI', Icon: SiOpenai }
+];
+---
+
+<section class="py-8 px-4">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white tracking-tight">
+      Tech Stack
+    </h2>
+    <div class="flex flex-wrap justify-center gap-8 mb-8">
+      {technologies.map((tech) => (
+        <div class="group relative flex flex-col items-center">
+          <div class="p-4 rounded-lg transition-all duration-300 hover:scale-110 hover:bg-gray-100 dark:hover:bg-gray-800">
+            <tech.Icon className="text-4xl text-gray-600 dark:text-gray-400 transition-colors duration-300 group-hover:text-gray-900 dark:group-hover:text-gray-100" />
+          </div>
+          <span class="absolute -bottom-8 opacity-0 font-medium text-sm text-gray-700 dark:text-gray-300 transition-opacity duration-300 group-hover:opacity-100 whitespace-nowrap">
+            {tech.name}
+          </span>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
