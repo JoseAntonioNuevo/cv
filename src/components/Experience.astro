@@ -101,7 +101,7 @@ experiences.sort((a, b) => parsePeriod(b.positions[0].period, presentText) - par
           <div class="flex items-start gap-4 mb-4">
             <div class="flex-shrink-0 w-16 h-16 bg-black rounded-lg flex items-center justify-center">
               {exp.logo ? (
-                <img src={exp.logo} alt={`${exp.company} logo`} class="w-12 h-12 object-contain" />
+                <img src={exp.logo} alt={`${exp.company} logo`} class="w-12 h-12 object-contain" loading="lazy" />
               ) : (
                 <div class="w-12 h-12 bg-gray-300 dark:bg-gray-600 rounded-lg flex items-center justify-center">
                   <span class="text-gray-500 dark:text-gray-400 text-xs font-medium">{exp.company.charAt(0)}</span>

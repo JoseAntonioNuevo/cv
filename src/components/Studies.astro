@@ -15,6 +15,7 @@ interface Study {
   year: string;
   description: string;
   icon: string;
+  logo?: string;
 }
 
 function getStudies(t: any): Study[] {
@@ -24,28 +25,32 @@ function getStudies(t: any): Study[] {
       institution: t('education.studies.fullstackMasters.institution'),
       year: t('education.studies.fullstackMasters.year'),
       description: t('education.studies.fullstackMasters.description'),
-      icon: '🎓'
+      icon: '🎓',
+      logo: '/education/threepoints.webp'
     },
     {
       degree: t('education.studies.dam.degree'),
       institution: t('education.studies.dam.institution'),
       year: t('education.studies.dam.year'),
       description: t('education.studies.dam.description'),
-      icon: '💻'
+      icon: '💻',
+      logo: '/education/uoc.webp'
     },
     {
       degree: t('education.studies.daw.degree'),
       institution: t('education.studies.daw.institution'),
       year: t('education.studies.daw.year'),
       description: t('education.studies.daw.description'),
-      icon: '🌐'
+      icon: '🌐',
+      logo: '/education/jesuites.webp'
     },
     {
       degree: t('education.studies.bachillerato.degree'),
       institution: t('education.studies.bachillerato.institution'),
       year: t('education.studies.bachillerato.year'),
       description: t('education.studies.bachillerato.description'),
-      icon: '📚'
+      icon: '📚',
+      logo: '/education/jesuites.webp'
     }
   ];
 }
@@ -86,17 +91,39 @@ const studies = getStudies(t);
                   </span>
                 </div>
                 
-                <!-- Study content -->
+                <!-- Study content with logo -->
                 <div class="pt-4">
-                  <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                    {study.degree}
-                  </h3>
-                  <p class="text-lg text-indigo-600 dark:text-indigo-400 font-medium mb-3 flex items-center gap-2">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
-                    </svg>
-                    {study.institution}
-                  </p>
+                  <div class="flex items-start gap-4 mb-4">
+                    <!-- Institution logo -->
+                    <div class="flex-shrink-0 w-16 h-16 bg-gray-100 dark:bg-gray-700 rounded-lg overflow-hidden shadow-md">
+                      {study.logo ? (
+                        <img 
+                          src={study.logo} 
+                          alt={`${study.institution} logo`} 
+                          class="w-full h-full object-contain p-2"
+                          loading="lazy"
+                        />
+                      ) : (
+                        <div class="w-full h-full flex items-center justify-center text-gray-400 dark:text-gray-500">
+                          <span class="text-2xl">{study.icon}</span>
+                        </div>
+                      )}
+                    </div>
+                    
+                    <!-- Study details -->
+                    <div class="flex-1">
+                      <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                        {study.degree}
+                      </h3>
+                      <p class="text-lg text-indigo-600 dark:text-indigo-400 font-medium flex items-center gap-2">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                        </svg>
+                        {study.institution}
+                      </p>
+                    </div>
+                  </div>
+                  
                   <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
                     {study.description}
                   </p>

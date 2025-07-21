@@ -40,8 +40,9 @@ const navItems = [
       <!-- Right side controls -->
       <div class="flex items-center space-x-4">
         <!-- Desktop controls -->
-        <div class="hidden lg:flex items-center space-x-4">
+        <div class="hidden lg:flex items-center">
           <LanguageSwitcher />
+          <div class="h-6 w-px bg-gray-300 dark:bg-gray-600 mx-6"></div>
           <ThemeToggle client:load />
         </div>
 
@@ -71,8 +72,9 @@ const navItems = [
         ))}
         
         <!-- Mobile controls -->
-        <div class="flex items-center justify-between px-4 pt-4 mt-4 border-t border-gray-200 dark:border-gray-700">
+        <div class="flex items-center justify-center px-4 pt-4 mt-4 border-t border-gray-200 dark:border-gray-700">
           <LanguageSwitcher />
+          <div class="h-6 w-px bg-gray-300 dark:bg-gray-600 mx-6"></div>
           <ThemeToggle client:load />
         </div>
       </div>

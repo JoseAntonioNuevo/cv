@@ -29,6 +29,7 @@ const languageFlags: Record<Language, string> = {
       <a 
         href={url} 
         class="flex items-center gap-3 px-4 py-3 text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 first:rounded-t-lg last:rounded-b-lg transition-colors duration-150 border-b border-gray-100 dark:border-gray-700 last:border-b-0"
+        aria-label={`Switch to ${languageNames[lang]}`}
       >
         <span class="text-lg" role="img" aria-label={`${languageNames[lang]} flag`}>{languageFlags[lang]}</span>
         <span class="font-medium">{languageNames[lang]}</span>
