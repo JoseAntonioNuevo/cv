@@ -1,0 +1,215 @@
+/* Print Styles for CV */
+@media print {
+  /* Reset and base styles */
+  * {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+  }
+
+  /* Page setup */
+  @page {
+    size: A4;
+    margin: 1.5cm;
+  }
+
+  /* Body adjustments */
+  body {
+    font-size: 11pt;
+    line-height: 1.5;
+    color: #000 !important;
+    background: #fff !important;
+    padding-top: 0 !important;
+  }
+
+  /* Hide non-essential elements */
+  header,
+  .theme-toggle,
+  .language-switcher,
+  #mobile-menu-button,
+  footer,
+  .nav-link::after,
+  .print-hide,
+  button[aria-label*="Verify Certificate"],
+  a[href="#contact"],
+  .contact-form {
+    display: none !important;
+  }
+
+  /* Main content adjustments */
+  main,
+  section {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    margin-bottom: 1rem;
+  }
+
+  /* Headings */
+  h1, h2, h3, h4 {
+    page-break-after: avoid;
+    break-after: avoid;
+    color: #000 !important;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  h1 {
+    font-size: 24pt;
+  }
+
+  h2 {
+    font-size: 18pt;
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.25rem;
+  }
+
+  h3 {
+    font-size: 14pt;
+  }
+
+  /* Profile section */
+  #home {
+    min-height: auto !important;
+    padding: 1rem 0 !important;
+  }
+
+  #home img {
+    width: 100px !important;
+    height: 100px !important;
+    float: right;
+    margin-left: 1rem;
+  }
+
+  /* Links */
+  a {
+    color: #000 !important;
+    text-decoration: none !important;
+  }
+
+  /* Show URL for external links */
+  a[href^="http"]:not([href*="localhost"]):not([href*="127.0.0.1"])::after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    color: #666;
+  }
+
+  /* Experience section */
+  .experience-item {
+    page-break-inside: avoid;
+    margin-bottom: 1rem;
+  }
+
+  /* Technologies/Skills section */
+  #skills .grid {
+    display: block !important;
+  }
+
+  #skills .technology-card {
+    display: inline-block;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+
+  /* Certifications */
+  #certifications .grid {
+    display: block !important;
+  }
+
+  #certifications .certification-item {
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    page-break-inside: avoid;
+  }
+
+  /* Portfolio section */
+  #projects .grid {
+    display: block !important;
+  }
+
+  #projects .project-card {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    page-break-inside: avoid;
+  }
+
+  /* Contact section - show info only */
+  #contact {
+    page-break-before: avoid;
+  }
+
+  #contact .contact-info {
+    display: block !important;
+  }
+
+  #contact h2 {
+    margin-bottom: 0.5rem;
+  }
+
+  /* Utility classes */
+  .print-only {
+    display: block !important;
+  }
+
+  .screen-only {
+    display: none !important;
+  }
+
+  /* Backgrounds and shadows */
+  .bg-gradient-to-r,
+  .bg-gradient-to-br,
+  .shadow-lg,
+  .shadow-xl,
+  .shadow-2xl {
+    background: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Dark mode overrides */
+  .dark\:bg-gray-900,
+  .dark\:bg-gray-800,
+  .dark\:text-white,
+  .dark\:text-gray-300 {
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  /* Grid adjustments */
+  .grid {
+    display: block !important;
+  }
+
+  .grid > * {
+    margin-bottom: 0.5rem;
+  }
+
+  /* Icon adjustments */
+  svg {
+    width: 16px !important;
+    height: 16px !important;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  /* Download CV button - hide in print */
+  a[download] {
+    display: none !important;
+  }
+
+  /* Add page numbers */
+  .page-number {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    font-size: 9pt;
+    color: #666;
+  }
+
+  .page-number::after {
+    content: counter(page);
+  }
+}

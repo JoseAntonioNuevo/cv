@@ -8,6 +8,7 @@ import Contact from '../components/Contact.astro';
 import Experience from '../components/Experience.astro';
 import Studies from '../components/Studies.astro';
 import Portfolio from '../components/Portfolio.astro';
+import Certifications from '../components/Certifications.astro';
 
 export interface Props {
   title: string;
@@ -15,22 +16,82 @@ export interface Props {
 
 const { title } = Astro.props;
 const lang = getLangFromUrl(Astro.url);
+
+// SEO metadata
+const siteUrl = Astro.url.origin;
+const currentUrl = Astro.url.href;
+const description = lang === 'es' 
+  ? 'Jose Antonio Nuevo - Tech Lead y Desarrollador Full Stack. Más de 10 años de experiencia creando soluciones tecnológicas innovadoras.'
+  : 'Jose Antonio Nuevo - Tech Lead & Full Stack Developer. Over 10 years of experience building innovative technology solutions.';
+const ogImage = `${siteUrl}/images/profile.jpg`;
 ---
 
 <!doctype html>
 <html lang={lang} class="dark">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Jose Antonio Nuevo - Tech Lead & Full Stack Developer" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={currentUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:locale" content={lang === 'es' ? 'es_ES' : 'en_US'} />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={currentUrl} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={ogImage} />
+    
+    <!-- Additional SEO -->
+    <meta name="author" content="Jose Antonio Nuevo" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={currentUrl} />
+    <link rel="alternate" hreflang="en" href={`${siteUrl}/`} />
+    <link rel="alternate" hreflang="es" href={`${siteUrl}/es/`} />
+    <link rel="alternate" hreflang="x-default" href={`${siteUrl}/`} />
     <script is:inline>
       const theme = localStorage.getItem('theme');
       const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
       const shouldBeDark = theme === 'dark' || (!theme && prefersDark);
       document.documentElement.classList.toggle('dark', shouldBeDark);
+    </script>
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Jose Antonio Nuevo",
+        "jobTitle": "Tech Lead & Full Stack Developer",
+        "description": "${description}",
+        "url": "${siteUrl}",
+        "image": "${ogImage}",
+        "sameAs": [
+          "https://www.linkedin.com/in/jose-antonio-nuevo",
+          "https://github.com/JoseAntonioNuevo"
+        ],
+        "knowsAbout": [
+          "JavaScript", "TypeScript", "React", "Node.js", "Python",
+          "AWS", "Docker", "Kubernetes", "MongoDB", "PostgreSQL"
+        ],
+        "alumniOf": {
+          "@type": "Organization",
+          "name": "Universitat Oberta de Catalunya"
+        },
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Freelance"
+        }
+      }
     </script>
   </head>
   <body class="pt-16 bg-white dark:bg-gray-900 text-gray-900 dark:text-white min-h-screen transition-colors duration-200">
@@ -39,6 +100,7 @@ const lang = getLangFromUrl(Astro.url);
     <Technologies />
     <Experience lang={lang} />
     <Studies />
+    <Certifications />
     <Portfolio />
     <Contact />
     <Footer />

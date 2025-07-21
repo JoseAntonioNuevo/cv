@@ -26,6 +26,24 @@ const createMailtoLink = (subject: string, body: string) => {
 ---
 
 <section id="contact" class="relative py-20 px-4 overflow-hidden">
+  <!-- Print-only contact info -->
+  <div class="hidden print-only contact-info" style="display: none;">
+    <h2 class="text-2xl font-bold mb-4">{t('contact.title')}</h2>
+    <div class="mb-2">
+      <strong>{t('contact.emailLabel')}:</strong> {email}
+    </div>
+    {phone && (
+      <div class="mb-2">
+        <strong>{t('contact.phoneLabel')}:</strong> {phone}
+      </div>
+    )}
+    <div class="mb-2">
+      <strong>LinkedIn:</strong> {linkedin}
+    </div>
+    <div class="mb-2">
+      <strong>GitHub:</strong> {github}
+    </div>
+  </div>
   <!-- Background decoration -->
   <div class="absolute inset-0 -z-10">
     <div class="absolute top-0 -left-4 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 dark:opacity-10 animate-blob"></div>
@@ -137,7 +155,7 @@ const createMailtoLink = (subject: string, body: string) => {
       </div>
 
       <!-- Contact Form -->
-      <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl dark:shadow-2xl p-8 border border-gray-100 dark:border-gray-700">
+      <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl dark:shadow-2xl p-8 border border-gray-100 dark:border-gray-700 contact-form">
         <h3 class="text-2xl font-semibold text-gray-800 dark:text-gray-100 mb-6">{t('contact.sendMessageTitle')}</h3>
         <form id="contact-form" class="space-y-5">
           <div>

@@ -6,6 +6,7 @@ export const translations = {
       experience: "Experience",
       education: "Education",
       skills: "Skills",
+      certifications: "Certifications",
       projects: "Projects",
       contact: "Contact",
     },
@@ -116,6 +117,29 @@ export const translations = {
       languages: "Languages",
       tools: "Tools & Technologies",
     },
+    certifications: {
+      title: "Certifications",
+      issuer: "Issued by",
+      date: "Date",
+      verify: "Verify Certificate",
+      badges: {
+        aws: {
+          name: "AWS Certified Solutions Architect",
+          issuer: "Amazon Web Services",
+          date: "2023",
+        },
+        docker: {
+          name: "Docker Certified Associate",
+          issuer: "Docker Inc.",
+          date: "2022",
+        },
+        react: {
+          name: "React Developer Certification",
+          issuer: "Meta",
+          date: "2023",
+        },
+      },
+    },
     projects: {
       title: "Projects",
       viewProject: "View Project",
@@ -180,6 +204,7 @@ export const translations = {
       experience: "Experiencia",
       education: "Educación",
       skills: "Habilidades",
+      certifications: "Certificaciones",
       projects: "Proyectos",
       contact: "Contacto",
     },
@@ -289,6 +314,29 @@ export const translations = {
       technical: "Habilidades Técnicas",
       languages: "Idiomas",
       tools: "Herramientas y Tecnologías",
+    },
+    certifications: {
+      title: "Certificaciones",
+      issuer: "Emitido por",
+      date: "Fecha",
+      verify: "Verificar Certificado",
+      badges: {
+        aws: {
+          name: "AWS Certified Solutions Architect",
+          issuer: "Amazon Web Services",
+          date: "2023",
+        },
+        docker: {
+          name: "Docker Certified Associate",
+          issuer: "Docker Inc.",
+          date: "2022",
+        },
+        react: {
+          name: "React Developer Certification",
+          issuer: "Meta",
+          date: "2023",
+        },
+      },
     },
     projects: {
       title: "Proyectos",
