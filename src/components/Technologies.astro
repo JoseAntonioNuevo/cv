@@ -1,5 +1,5 @@
 ---
-import { SiNextdotjs, SiPython, SiLaravel, SiNodedotjs, SiAstro, SiVuedotjs, SiTailwindcss, SiDocker, SiLinux, SiAmazon, SiOpenai } from 'react-icons/si';
+import { SiNextdotjs, SiPython, SiLaravel, SiNodedotjs, SiAstro, SiVuedotjs, SiTailwindcss, SiDocker, SiLinux, SiAmazonwebservices, SiOpenai, SiGit } from 'react-icons/si';
 
 const technologies = [
   { name: 'Next.js', Icon: SiNextdotjs },
@@ -11,8 +11,9 @@ const technologies = [
   { name: 'Tailwind CSS', Icon: SiTailwindcss },
   { name: 'Docker', Icon: SiDocker },
   { name: 'Linux', Icon: SiLinux },
-  { name: 'AWS', Icon: SiAmazon },
-  { name: 'AI', Icon: SiOpenai }
+  { name: 'AWS', Icon: SiAmazonwebservices },
+  { name: 'AI', Icon: SiOpenai },
+  { name: 'Git', Icon: SiGit }
 ];
 ---
 
@@ -21,7 +22,7 @@ const technologies = [
     <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-10 text-gray-900 dark:text-white tracking-tight text-center">
       Tech Stack
     </h2>
-    <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:flex lg:flex-wrap lg:justify-center gap-4 sm:gap-6 lg:gap-8">
+    <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-12 gap-4 sm:gap-6 lg:gap-4">
       {technologies.map((tech) => (
         <div class="group relative flex flex-col items-center">
           <div class="p-2 sm:p-3 md:p-4 rounded-lg transition-all duration-300 hover:scale-110 hover:bg-gray-100 dark:hover:bg-gray-800">
