@@ -21,8 +21,15 @@ const navItems = [
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-16">
       <!-- Logo -->
-      <a href="#home" class="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent hover:from-indigo-500 hover:to-purple-500 transition-all duration-300">
-        JAN
+      <a href="#home" class="group flex items-center">
+        <div class="relative overflow-hidden rounded-full w-10 h-10 ring-2 ring-indigo-600/20 group-hover:ring-indigo-600/40 transition-all duration-300">
+          <img 
+            src="/jan.webp" 
+            alt="JAN Logo" 
+            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300"
+          />
+          <div class="absolute inset-0 bg-gradient-to-tr from-indigo-600/10 to-purple-600/10 group-hover:from-indigo-600/20 group-hover:to-purple-600/20 transition-all duration-300"></div>
+        </div>
       </a>
 
       <!-- Desktop Navigation -->
