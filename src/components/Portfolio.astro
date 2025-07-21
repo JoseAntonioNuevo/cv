@@ -29,7 +29,7 @@ function getProjects(t: any): Project[] {
       description: t('projects.portfolio.boardGame.description'),
       technologies: t('projects.portfolio.boardGame.technologies'),
       githubUrl: 'https://github.com/JoseAntonioNuevo/Tech-Test-Board-Game',
-      liveUrl: 'https://smartpoint-tech-test-joseantonio.netlify.app',
+      liveUrl: 'https://board-game.joseantonionuevo.tech',
       image: '🎮',
       color: 'from-blue-500 to-purple-600'
     }
@@ -44,38 +44,38 @@ const projects = getProjects(t);
     <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-12 text-gray-900 dark:text-white text-center">
       {t('projects.title')}
     </h2>
-    
+
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
       {projects.map((project) => (
         <article class={`project-card group relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105`}>
           <!-- Background gradient overlay -->
           <div class={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-5 group-hover:opacity-10 transition-opacity duration-500`}></div>
-          
+
           <!-- Project icon header -->
           <div class={`relative h-40 sm:h-48 bg-gradient-to-br ${project.color} flex items-center justify-center overflow-hidden`}>
             <div class="absolute inset-0 bg-black opacity-10"></div>
-            
+
             <!-- Animated background pattern -->
             <div class="absolute inset-0 opacity-20">
               <div class="absolute -top-4 -right-4 w-24 h-24 bg-white rounded-full animate-pulse"></div>
               <div class="absolute -bottom-8 -left-8 w-32 h-32 bg-white rounded-full animate-pulse delay-300"></div>
               <div class="absolute top-1/2 left-1/2 w-20 h-20 bg-white rounded-full animate-pulse delay-700"></div>
             </div>
-            
+
             <!-- Project icon -->
             <span class="relative text-5xl sm:text-6xl filter drop-shadow-lg animate-float">{project.image}</span>
           </div>
-          
+
           <!-- Project content -->
           <div class="relative p-4 sm:p-6">
             <h3 class="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-2 sm:mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 transition-all duration-300">
               {project.title}
             </h3>
-            
+
             <p class="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-4 sm:mb-6 line-clamp-3">
               {project.description}
             </p>
-            
+
             <!-- Technologies -->
             <div class="mb-4 sm:mb-6">
               <h4 class="text-xs sm:text-sm font-semibold text-gray-700 dark:text-gray-400 mb-1.5 sm:mb-2">{t('projects.technologies')}:</h4>
@@ -87,10 +87,10 @@ const projects = getProjects(t);
                 ))}
               </div>
             </div>
-            
+
             <!-- Action buttons -->
             <div class="flex flex-col sm:flex-row gap-2 sm:gap-3">
-              <a 
+              <a
                 href={project.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -101,9 +101,9 @@ const projects = getProjects(t);
                 </svg>
                 <span class="font-medium sm:font-semibold">{t('projects.viewCode')}</span>
               </a>
-              
+
               {project.liveUrl && (
-                <a 
+                <a
                   href={project.liveUrl}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -117,14 +117,14 @@ const projects = getProjects(t);
               )}
             </div>
           </div>
-          
+
           <!-- Decorative elements -->
           <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full opacity-10 blur-2xl group-hover:opacity-20 transition-opacity"></div>
           <div class="absolute bottom-0 left-0 -mb-4 -ml-4 w-32 h-32 bg-gradient-to-tr from-purple-400 to-pink-500 rounded-full opacity-10 blur-2xl group-hover:opacity-20 transition-opacity"></div>
         </article>
       ))}
     </div>
-    
+
     <!-- Background decoration -->
     <div class="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
       <div class="absolute top-20 right-0 w-96 h-96 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-full blur-3xl"></div>
@@ -137,7 +137,7 @@ const projects = getProjects(t);
   .portfolio-section {
     @apply relative;
   }
-  
+
   @keyframes float {
     0%, 100% {
       transform: translateY(0);
@@ -146,31 +146,31 @@ const projects = getProjects(t);
       transform: translateY(-10px);
     }
   }
-  
+
   .animate-float {
     animation: float 3s ease-in-out infinite;
   }
-  
+
   .delay-300 {
     animation-delay: 300ms;
   }
-  
+
   .delay-700 {
     animation-delay: 700ms;
   }
-  
+
   .line-clamp-3 {
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
-  
+
   /* Hover effect for project cards */
   .project-card {
     transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
-  
+
   .project-card:hover {
     transform: translateY(-5px) scale(1.02);
   }
