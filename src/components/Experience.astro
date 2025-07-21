@@ -1,0 +1,167 @@
+---
+import { useTranslations } from '../i18n/utils';
+import type { Language } from '../i18n/translations';
+export interface Props { lang: string; }
+const { lang = 'en' } = Astro.props;
+const t = useTranslations(lang as Language);
+
+function parsePeriod(period: string): number {
+  // Handles periods like "Feb 2025 - Present" or "Aug 2020 - Jan 2022"
+  const [start, end] = period.split(' - ').map((s: string) => s.trim());
+  // If end is 'Present', treat as far future
+  const monthMap: Record<string, string> = {Jan: '01',Feb: '02',Mar: '03',Apr: '04',May: '05',Jun: '06',Jul: '07',Aug: '08',Sep: '09',Oct: '10',Nov: '11',Dec: '12'};
+  if (end === 'Present') return new Date(3000, 0, 1).getTime();
+  // Convert e.g. "Feb 2025" to "2025-02-01"
+  const [month, year] = end.split(' ');
+  const formatted = `${year}-${monthMap[month]}-01`;
+  return new Date(formatted).getTime();
+}
+
+const experiences = [
+  {
+    company: "Recovo",
+    location: "Barcelona, Spain - Hibrid",
+    logo: "/experience/recovo.webp",
+    technologies: ["Next.js", "Laravel", "Python", "TypeScript", "AWS", "PostgreSQL", "Docker", "Redis", "Git"],
+    positions: [
+      {
+        title: "Full Stack Engineer",
+        period: "Oct 2022 - Feb 2025",
+        description:
+          "Professional evolution at sustainable fashion technology company: Full Stack Engineer (Oct 2022 - Feb 2025) and Tech Lead (Feb 2025 - Present). Contributing to circular economy platform development from hands-on development to technical leadership.",
+        achievements: [
+          "Built microservices architecture for marketplace platform, implemented real-time inventory management system, developed RESTful APIs and GraphQL endpoints, improved platform performance by 40%"
+        ]
+      },
+      {
+        title: "Tech Lead",
+        period: "Feb 2025 - Present",
+        description:
+          "Professional evolution at sustainable fashion technology company: Full Stack Engineer (Oct 2022 - Feb 2025) and Tech Lead (Feb 2025 - Present). Contributing to circular economy platform development from hands-on development to technical leadership.",
+        achievements: [
+          "Leading cross-functional teams, designing scalable systems for sustainable marketplace, mentoring developers and establishing best practices, driving architectural decisions and technology adoption"
+        ]
+      }
+    ]
+  },
+  {
+    company: "Acceleralia",
+    location: "Full Remote",
+    logo: "/experience/acceleralia.webp",
+    technologies: ["Vue.js", "Laravel", "MySQL", "Docker", "Linux Server", "Digital Ocean", "Git", "AI"],
+    positions: [
+      {
+        title: "Full Stack Engineer",
+        period: "Aug 2020 - Jan 2022",
+        description:
+          "Career progression through multiple roles: Full Stack Engineer (Aug 2020 - Jan 2022), Tech Lead (Jan 2022 - Oct 2022), and Part-time Full Stack Developer (Oct 2022 - Jul 2025). This journey encompassed hands-on development to technical leadership and consultancy.",
+        achievements: [
+          "Built responsive web applications from scratch, implemented authentication and authorization systems, integrated third-party APIs and payment gateways"
+        ]
+      },
+      {
+        title: "Tech Lead",
+        period: "Jan 2022 - Oct 2022",
+        description:
+          "Career progression through multiple roles: Full Stack Engineer (Aug 2020 - Jan 2022), Tech Lead (Jan 2022 - Oct 2022), and Part-time Full Stack Developer (Oct 2022 - Jul 2025). This journey encompassed hands-on development to technical leadership and consultancy.",
+        achievements: [
+          "Managed team of 8 developers across multiple projects, established coding standards and review processes, introduced agile methodologies improving delivery time by 30%"
+        ]
+      },
+      {
+        title: "Part-time Full Stack Developer",
+        period: "Oct 2022 - Jul 2025",
+        description:
+          "Career progression through multiple roles: Full Stack Engineer (Aug 2020 - Jan 2022), Tech Lead (Jan 2022 - Oct 2022), and Part-time Full Stack Developer (Oct 2022 - Jul 2025). This journey encompassed hands-on development to technical leadership and consultancy.",
+        achievements: [
+          "Maintained critical client applications, provided technical consultancy for ongoing projects, ensured smooth knowledge transfer to new team members"
+        ]
+      }
+    ]
+  }
+];
+
+// Sort positions within each experience (most recent first)
+experiences.forEach((exp) => {
+  exp.positions.sort((a, b) => parsePeriod(b.period) - parsePeriod(a.period));
+});
+// Sort experiences (most recent position first)
+experiences.sort((a, b) => parsePeriod(b.positions[0].period) - parsePeriod(a.positions[0].period));
+---
+
+<section class="experience-section">
+  <h2 class="text-3xl font-bold mb-8 text-gray-800 dark:text-gray-100">{t('experience.title')}</h2>
+
+  <div class="space-y-8">
+    {experiences.map((exp) => (
+      <article class="experience-item relative pl-8 pb-8 border-l-2 border-gray-300 dark:border-gray-700 last:border-0 last:pb-0">
+        <div class="absolute -left-[9px] top-0 w-4 h-4 bg-blue-500 rounded-full border-4 border-white dark:border-gray-900"></div>
+
+        <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+          <div class="flex items-start gap-4 mb-4">
+            <div class="flex-shrink-0 w-16 h-16 bg-black rounded-lg flex items-center justify-center">
+              {exp.logo ? (
+                <img src={exp.logo} alt={`${exp.company} logo`} class="w-12 h-12 object-contain" />
+              ) : (
+                <div class="w-12 h-12 bg-gray-300 dark:bg-gray-600 rounded-lg flex items-center justify-center">
+                  <span class="text-gray-500 dark:text-gray-400 text-xs font-medium">{exp.company.charAt(0)}</span>
+                </div>
+              )}
+            </div>
+            <div class="flex-1">
+              <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2">
+                <div>
+                  <p class="text-lg text-blue-600 dark:text-blue-400">{exp.company}</p>
+                  {exp.location && (
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">{exp.location}</p>
+                  )}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {exp.positions.map((pos) => (
+            <div class="mb-6 last:mb-0">
+              <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2">
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">{pos.title}</h3>
+                <span class="text-sm text-gray-500 dark:text-gray-400 mt-2 sm:mt-0">{pos.period}</span>
+              </div>
+              {pos.description && (
+                <p class="text-gray-700 dark:text-gray-300 mb-3">{pos.description}</p>
+              )}
+              {pos.achievements && pos.achievements.length > 0 && (
+                <ul class="list-disc list-inside space-y-1 mb-3">
+                  {pos.achievements.map((achievement) => (
+                    <li class="text-gray-700 dark:text-gray-300">{achievement}</li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          ))}
+
+          {exp.technologies && exp.technologies.length > 0 && (
+            <div class="flex flex-wrap gap-2 mt-4">
+              {exp.technologies.map((tech) => (
+                <span class="px-3 py-1 text-xs font-medium bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full">
+                  {tech}
+                </span>
+              ))}
+            </div>
+          )}
+        </div>
+      </article>
+    ))}
+  </div>
+
+</section>
+
+<style>
+  .experience-section {
+    @apply max-w-4xl mx-auto;
+  }
+
+  .experience-item:hover .absolute {
+    @apply scale-125;
+    transition: transform 0.2s ease;
+  }
+</style>
