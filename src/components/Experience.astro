@@ -5,88 +5,88 @@ export interface Props { lang: string; }
 const { lang = 'en' } = Astro.props;
 const t = useTranslations(lang as Language);
 
-function parsePeriod(period: string): number {
+function parsePeriod(period: string, presentText: string): number {
   // Handles periods like "Feb 2025 - Present" or "Aug 2020 - Jan 2022"
   const [start, end] = period.split(' - ').map((s: string) => s.trim());
-  // If end is 'Present', treat as far future
+  // If end is 'Present' or translated equivalent, treat as far future
   const monthMap: Record<string, string> = {Jan: '01',Feb: '02',Mar: '03',Apr: '04',May: '05',Jun: '06',Jul: '07',Aug: '08',Sep: '09',Oct: '10',Nov: '11',Dec: '12'};
-  if (end === 'Present') return new Date(3000, 0, 1).getTime();
+  if (end === 'Present' || end === presentText) return new Date(3000, 0, 1).getTime();
   // Convert e.g. "Feb 2025" to "2025-02-01"
   const [month, year] = end.split(' ');
   const formatted = `${year}-${monthMap[month]}-01`;
   return new Date(formatted).getTime();
 }
 
-const experiences = [
-  {
-    company: "Recovo",
-    location: "Barcelona, Spain - Hibrid",
-    logo: "/experience/recovo.webp",
-    technologies: ["Next.js", "Laravel", "Python", "TypeScript", "AWS", "PostgreSQL", "Docker", "Redis", "Git"],
-    positions: [
-      {
-        title: "Full Stack Engineer",
-        period: "Oct 2022 - Feb 2025",
-        description:
-          "Professional evolution at sustainable fashion technology company: Full Stack Engineer (Oct 2022 - Feb 2025) and Tech Lead (Feb 2025 - Present). Contributing to circular economy platform development from hands-on development to technical leadership.",
-        achievements: [
-          "Built microservices architecture for marketplace platform, implemented real-time inventory management system, developed RESTful APIs and GraphQL endpoints, improved platform performance by 40%"
-        ]
-      },
-      {
-        title: "Tech Lead",
-        period: "Feb 2025 - Present",
-        description:
-          "Professional evolution at sustainable fashion technology company: Full Stack Engineer (Oct 2022 - Feb 2025) and Tech Lead (Feb 2025 - Present). Contributing to circular economy platform development from hands-on development to technical leadership.",
-        achievements: [
-          "Leading cross-functional teams, designing scalable systems for sustainable marketplace, mentoring developers and establishing best practices, driving architectural decisions and technology adoption"
-        ]
-      }
-    ]
-  },
-  {
-    company: "Acceleralia",
-    location: "Full Remote",
-    logo: "/experience/acceleralia.webp",
-    technologies: ["Vue.js", "Laravel", "MySQL", "Docker", "Linux Server", "Digital Ocean", "Git", "AI"],
-    positions: [
-      {
-        title: "Full Stack Engineer",
-        period: "Aug 2020 - Jan 2022",
-        description:
-          "Career progression through multiple roles: Full Stack Engineer (Aug 2020 - Jan 2022), Tech Lead (Jan 2022 - Oct 2022), and Part-time Full Stack Developer (Oct 2022 - Jul 2025). This journey encompassed hands-on development to technical leadership and consultancy.",
-        achievements: [
-          "Built responsive web applications from scratch, implemented authentication and authorization systems, integrated third-party APIs and payment gateways"
-        ]
-      },
-      {
-        title: "Tech Lead",
-        period: "Jan 2022 - Oct 2022",
-        description:
-          "Career progression through multiple roles: Full Stack Engineer (Aug 2020 - Jan 2022), Tech Lead (Jan 2022 - Oct 2022), and Part-time Full Stack Developer (Oct 2022 - Jul 2025). This journey encompassed hands-on development to technical leadership and consultancy.",
-        achievements: [
-          "Managed team of 8 developers across multiple projects, established coding standards and review processes, introduced agile methodologies improving delivery time by 30%"
-        ]
-      },
-      {
-        title: "Part-time Full Stack Developer",
-        period: "Oct 2022 - Jul 2025",
-        description:
-          "Career progression through multiple roles: Full Stack Engineer (Aug 2020 - Jan 2022), Tech Lead (Jan 2022 - Oct 2022), and Part-time Full Stack Developer (Oct 2022 - Jul 2025). This journey encompassed hands-on development to technical leadership and consultancy.",
-        achievements: [
-          "Maintained critical client applications, provided technical consultancy for ongoing projects, ensured smooth knowledge transfer to new team members"
-        ]
-      }
-    ]
-  }
-];
+function getExperiences(t: any) {
+  return [
+    {
+      company: "Recovo",
+      location: t('experience.companies.recovo.location'),
+      logo: "/experience/recovo.webp",
+      technologies: ["Next.js", "Laravel", "Python", "TypeScript", "AWS", "PostgreSQL", "Docker", "Redis", "Git"],
+      positions: [
+        {
+          title: t('experience.companies.recovo.positions.fullstack'),
+          period: "Oct 2022 - Feb 2025",
+          description: t('experience.companies.recovo.descriptions.fullstack'),
+          achievements: [
+            t('experience.companies.recovo.achievements.fullstack')
+          ]
+        },
+        {
+          title: t('experience.companies.recovo.positions.techlead'),
+          period: `Feb 2025 - ${t('experience.present')}`,
+          description: t('experience.companies.recovo.descriptions.techlead'),
+          achievements: [
+            t('experience.companies.recovo.achievements.techlead')
+          ]
+        }
+      ]
+    },
+    {
+      company: "Acceleralia",
+      location: t('experience.companies.acceleralia.location'),
+      logo: "/experience/acceleralia.webp",
+      technologies: ["Vue.js", "Laravel", "MySQL", "Docker", "Linux Server", "Digital Ocean", "Git", "AI"],
+      positions: [
+        {
+          title: t('experience.companies.acceleralia.positions.fullstack'),
+          period: "Aug 2020 - Jan 2022",
+          description: t('experience.companies.acceleralia.descriptions.fullstack'),
+          achievements: [
+            t('experience.companies.acceleralia.achievements.fullstack')
+          ]
+        },
+        {
+          title: t('experience.companies.acceleralia.positions.techlead'),
+          period: "Jan 2022 - Oct 2022",
+          description: t('experience.companies.acceleralia.descriptions.techlead'),
+          achievements: [
+            t('experience.companies.acceleralia.achievements.techlead')
+          ]
+        },
+        {
+          title: t('experience.companies.acceleralia.positions.parttime'),
+          period: "Oct 2022 - Jul 2025",
+          description: t('experience.companies.acceleralia.descriptions.parttime'),
+          achievements: [
+            t('experience.companies.acceleralia.achievements.parttime')
+          ]
+        }
+      ]
+    }
+  ];
+}
+
+const experiences = getExperiences(t);
 
 // Sort positions within each experience (most recent first)
+const presentText = t('experience.present');
 experiences.forEach((exp) => {
-  exp.positions.sort((a, b) => parsePeriod(b.period) - parsePeriod(a.period));
+  exp.positions.sort((a, b) => parsePeriod(b.period, presentText) - parsePeriod(a.period, presentText));
 });
 // Sort experiences (most recent position first)
-experiences.sort((a, b) => parsePeriod(b.positions[0].period) - parsePeriod(a.positions[0].period));
+experiences.sort((a, b) => parsePeriod(b.positions[0].period, presentText) - parsePeriod(a.positions[0].period, presentText));
 ---
 
 <section class="experience-section">

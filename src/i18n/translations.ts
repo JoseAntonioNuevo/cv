@@ -23,7 +23,43 @@ export const translations = {
     experience: {
       title: "Work Experience",
       current: "Current",
-      responsibilities: "Responsibilities"
+      responsibilities: "Responsibilities",
+      companies: {
+        recovo: {
+          location: "Barcelona, Spain - Hybrid",
+          positions: {
+            fullstack: "Full Stack Engineer",
+            techlead: "Tech Lead"
+          },
+          descriptions: {
+            fullstack: "Professional evolution at sustainable fashion technology company: Full Stack Engineer (Oct 2022 - Feb 2025) and Tech Lead (Feb 2025 - Present). Contributing to circular economy platform development from hands-on development to technical leadership.",
+            techlead: "Professional evolution at sustainable fashion technology company: Full Stack Engineer (Oct 2022 - Feb 2025) and Tech Lead (Feb 2025 - Present). Contributing to circular economy platform development from hands-on development to technical leadership."
+          },
+          achievements: {
+            fullstack: "Built microservices architecture for marketplace platform, implemented real-time inventory management system, developed RESTful APIs and GraphQL endpoints, improved platform performance by 40%",
+            techlead: "Leading cross-functional teams, designing scalable systems for sustainable marketplace, mentoring developers and establishing best practices, driving architectural decisions and technology adoption"
+          }
+        },
+        acceleralia: {
+          location: "Full Remote",
+          positions: {
+            fullstack: "Full Stack Engineer",
+            techlead: "Tech Lead",
+            parttime: "Part-time Full Stack Developer"
+          },
+          descriptions: {
+            fullstack: "Career progression through multiple roles: Full Stack Engineer (Aug 2020 - Jan 2022), Tech Lead (Jan 2022 - Oct 2022), and Part-time Full Stack Developer (Oct 2022 - Jul 2025). This journey encompassed hands-on development to technical leadership and consultancy.",
+            techlead: "Career progression through multiple roles: Full Stack Engineer (Aug 2020 - Jan 2022), Tech Lead (Jan 2022 - Oct 2022), and Part-time Full Stack Developer (Oct 2022 - Jul 2025). This journey encompassed hands-on development to technical leadership and consultancy.",
+            parttime: "Career progression through multiple roles: Full Stack Engineer (Aug 2020 - Jan 2022), Tech Lead (Jan 2022 - Oct 2022), and Part-time Full Stack Developer (Oct 2022 - Jul 2025). This journey encompassed hands-on development to technical leadership and consultancy."
+          },
+          achievements: {
+            fullstack: "Built responsive web applications from scratch, implemented authentication and authorization systems, integrated third-party APIs and payment gateways",
+            techlead: "Managed team of 8 developers across multiple projects, established coding standards and review processes, introduced agile methodologies improving delivery time by 30%",
+            parttime: "Maintained critical client applications, provided technical consultancy for ongoing projects, ensured smooth knowledge transfer to new team members"
+          }
+        }
+      },
+      present: "Present"
     },
     education: {
       title: "Education",
@@ -97,7 +133,43 @@ export const translations = {
     experience: {
       title: "Experiencia Laboral",
       current: "Actual",
-      responsibilities: "Responsabilidades"
+      responsibilities: "Responsabilidades",
+      companies: {
+        recovo: {
+          location: "Barcelona, España - Híbrido",
+          positions: {
+            fullstack: "Ingeniero Full Stack",
+            techlead: "Tech Lead"
+          },
+          descriptions: {
+            fullstack: "Evolución profesional en empresa de tecnología de moda sostenible: Ingeniero Full Stack (Oct 2022 - Feb 2025) y Tech Lead (Feb 2025 - Presente). Contribuyendo al desarrollo de plataforma de economía circular desde desarrollo práctico hasta liderazgo técnico.",
+            techlead: "Evolución profesional en empresa de tecnología de moda sostenible: Ingeniero Full Stack (Oct 2022 - Feb 2025) y Tech Lead (Feb 2025 - Presente). Contribuyendo al desarrollo de plataforma de economía circular desde desarrollo práctico hasta liderazgo técnico."
+          },
+          achievements: {
+            fullstack: "Construí arquitectura de microservicios para plataforma de marketplace, implementé sistema de gestión de inventario en tiempo real, desarrollé APIs RESTful y endpoints GraphQL, mejoré el rendimiento de la plataforma en un 40%",
+            techlead: "Liderando equipos multifuncionales, diseñando sistemas escalables para marketplace sostenible, mentoreando desarrolladores y estableciendo mejores prácticas, impulsando decisiones arquitectónicas y adopción de tecnologías"
+          }
+        },
+        acceleralia: {
+          location: "Remoto Completo",
+          positions: {
+            fullstack: "Ingeniero Full Stack",
+            techlead: "Tech Lead",
+            parttime: "Desarrollador Full Stack de Medio Tiempo"
+          },
+          descriptions: {
+            fullstack: "Progresión profesional a través de múltiples roles: Ingeniero Full Stack (Ago 2020 - Ene 2022), Tech Lead (Ene 2022 - Oct 2022), y Desarrollador Full Stack de Medio Tiempo (Oct 2022 - Jul 2025). Este viaje abarcó desde desarrollo práctico hasta liderazgo técnico y consultoría.",
+            techlead: "Progresión profesional a través de múltiples roles: Ingeniero Full Stack (Ago 2020 - Ene 2022), Tech Lead (Ene 2022 - Oct 2022), y Desarrollador Full Stack de Medio Tiempo (Oct 2022 - Jul 2025). Este viaje abarcó desde desarrollo práctico hasta liderazgo técnico y consultoría.",
+            parttime: "Progresión profesional a través de múltiples roles: Ingeniero Full Stack (Ago 2020 - Ene 2022), Tech Lead (Ene 2022 - Oct 2022), y Desarrollador Full Stack de Medio Tiempo (Oct 2022 - Jul 2025). Este viaje abarcó desde desarrollo práctico hasta liderazgo técnico y consultoría."
+          },
+          achievements: {
+            fullstack: "Construí aplicaciones web responsivas desde cero, implementé sistemas de autenticación y autorización, integré APIs de terceros y pasarelas de pago",
+            techlead: "Gestioné equipo de 8 desarrolladores en múltiples proyectos, establecí estándares de código y procesos de revisión, introduje metodologías ágiles mejorando el tiempo de entrega en un 30%",
+            parttime: "Mantuve aplicaciones críticas de clientes, proporcioné consultoría técnica para proyectos en curso, aseguré transferencia de conocimiento fluida a nuevos miembros del equipo"
+          }
+        }
+      },
+      present: "Presente"
     },
     education: {
       title: "Educación",
