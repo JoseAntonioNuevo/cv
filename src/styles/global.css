@@ -4,3 +4,33 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* Prevent horizontal scroll on mobile */
+body {
+  overflow-x: hidden;
+}
+
+/* Ensure proper touch targets on mobile */
+@media (max-width: 640px) {
+  /* Touch targets for interactive elements */
+  button {
+    min-height: 44px;
+  }
+  
+  /* Adjust for fixed header on mobile */
+  section {
+    scroll-margin-top: 4rem;
+  }
+  
+  /* Fix contact section overflow on mobile */
+  #contact .max-w-5xl {
+    max-width: 100%;
+  }
+}
+
+/* Improve readability on small screens */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+}

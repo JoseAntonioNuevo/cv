@@ -89,31 +89,31 @@ experiences.forEach((exp) => {
 experiences.sort((a, b) => parsePeriod(b.positions[0].period, presentText) - parsePeriod(a.positions[0].period, presentText));
 ---
 
-<section id="experience" class="experience-section">
-  <h2 class="text-3xl font-bold mb-8 text-gray-800 dark:text-gray-100">{t('experience.title')}</h2>
+<section id="experience" class="experience-section py-12 sm:py-16 px-4">
+  <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-10 text-gray-800 dark:text-gray-100 text-center">{t('experience.title')}</h2>
 
   <div class="space-y-8">
     {experiences.map((exp) => (
-      <article class="experience-item relative pl-8 pb-8 border-l-2 border-gray-300 dark:border-gray-700 last:border-0 last:pb-0">
+      <article class="experience-item relative pl-6 sm:pl-8 pb-8 border-l-2 border-gray-300 dark:border-gray-700 last:border-0 last:pb-0">
         <div class="absolute -left-[9px] top-0 w-4 h-4 bg-blue-500 rounded-full border-4 border-white dark:border-gray-900"></div>
 
-        <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
-          <div class="flex items-start gap-4 mb-4">
-            <div class="flex-shrink-0 w-16 h-16 bg-black rounded-lg flex items-center justify-center">
+        <div class="bg-white dark:bg-gray-800 rounded-lg p-4 sm:p-6 shadow-sm hover:shadow-md transition-shadow">
+          <div class="flex items-start gap-3 sm:gap-4 mb-4">
+            <div class="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-black rounded-lg flex items-center justify-center">
               {exp.logo ? (
-                <img src={exp.logo} alt={`${exp.company} logo`} class="w-12 h-12 object-contain" loading="lazy" />
+                <img src={exp.logo} alt={`${exp.company} logo`} class="w-10 h-10 sm:w-12 sm:h-12 object-contain" loading="lazy" />
               ) : (
-                <div class="w-12 h-12 bg-gray-300 dark:bg-gray-600 rounded-lg flex items-center justify-center">
+                <div class="w-10 h-10 sm:w-12 sm:h-12 bg-gray-300 dark:bg-gray-600 rounded-lg flex items-center justify-center">
                   <span class="text-gray-500 dark:text-gray-400 text-xs font-medium">{exp.company.charAt(0)}</span>
                 </div>
               )}
             </div>
             <div class="flex-1">
-              <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2">
+              <div class="flex flex-col">
                 <div>
-                  <p class="text-lg text-blue-600 dark:text-blue-400">{exp.company}</p>
+                  <p class="text-base sm:text-lg font-semibold text-blue-600 dark:text-blue-400">{exp.company}</p>
                   {exp.location && (
-                    <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">{exp.location}</p>
+                    <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400 mt-0.5">{exp.location}</p>
                   )}
                 </div>
               </div>
@@ -121,18 +121,18 @@ experiences.sort((a, b) => parsePeriod(b.positions[0].period, presentText) - par
           </div>
 
           {exp.positions.map((pos) => (
-            <div class="mb-6 last:mb-0">
+            <div class="mb-4 sm:mb-6 last:mb-0">
               <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2">
-                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">{pos.title}</h3>
-                <span class="text-sm text-gray-500 dark:text-gray-400 mt-2 sm:mt-0">{pos.period}</span>
+                <h3 class="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white">{pos.title}</h3>
+                <span class="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mt-1 sm:mt-0">{pos.period}</span>
               </div>
               {pos.description && (
-                <p class="text-gray-700 dark:text-gray-300 mb-3">{pos.description}</p>
+                <p class="text-sm sm:text-base text-gray-700 dark:text-gray-300 mb-2 sm:mb-3">{pos.description}</p>
               )}
               {pos.achievements && pos.achievements.length > 0 && (
-                <ul class="list-disc list-inside space-y-1 mb-3">
+                <ul class="list-disc list-inside space-y-1 mb-2 sm:mb-3">
                   {pos.achievements.map((achievement) => (
-                    <li class="text-gray-700 dark:text-gray-300">{achievement}</li>
+                    <li class="text-sm sm:text-base text-gray-700 dark:text-gray-300">{achievement}</li>
                   ))}
                 </ul>
               )}
@@ -140,9 +140,9 @@ experiences.sort((a, b) => parsePeriod(b.positions[0].period, presentText) - par
           ))}
 
           {exp.technologies && exp.technologies.length > 0 && (
-            <div class="flex flex-wrap gap-2 mt-4">
+            <div class="flex flex-wrap gap-1.5 sm:gap-2 mt-3 sm:mt-4">
               {exp.technologies.map((tech) => (
-                <span class="px-3 py-1 text-xs font-medium bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full">
+                <span class="px-2 sm:px-3 py-0.5 sm:py-1 text-xs font-medium bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full">
                   {tech}
                 </span>
               ))}
