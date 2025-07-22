@@ -1,0 +1,58 @@
+[
+  {
+    "company": "Recovo",
+    "locationKey": "experience.companies.recovo.location",
+    "logo": "/experience/recovo.webp",
+    "technologies": ["Next.js", "Laravel", "Python", "TypeScript", "AWS", "PostgreSQL", "Docker", "Redis", "Git"],
+    "positions": [
+      {
+        "titleKey": "experience.companies.recovo.positions.fullstack",
+        "period": "Oct 2022 - Feb 2025",
+        "descriptionKey": "experience.companies.recovo.descriptions.fullstack",
+        "achievementsKeys": [
+          "experience.companies.recovo.achievements.fullstack"
+        ]
+      },
+      {
+        "titleKey": "experience.companies.recovo.positions.techlead",
+        "period": "Feb 2025 - Present",
+        "descriptionKey": "experience.companies.recovo.descriptions.techlead",
+        "achievementsKeys": [
+          "experience.companies.recovo.achievements.techlead"
+        ]
+      }
+    ]
+  },
+  {
+    "company": "Acceleralia",
+    "locationKey": "experience.companies.acceleralia.location",
+    "logo": "/experience/acceleralia.webp",
+    "technologies": ["Vue.js", "Laravel", "MySQL", "Docker", "Linux Server", "Digital Ocean", "Git", "AI"],
+    "positions": [
+      {
+        "titleKey": "experience.companies.acceleralia.positions.fullstack",
+        "period": "Aug 2020 - Jan 2022",
+        "descriptionKey": "experience.companies.acceleralia.descriptions.fullstack",
+        "achievementsKeys": [
+          "experience.companies.acceleralia.achievements.fullstack"
+        ]
+      },
+      {
+        "titleKey": "experience.companies.acceleralia.positions.techlead",
+        "period": "Jan 2022 - Oct 2022",
+        "descriptionKey": "experience.companies.acceleralia.descriptions.techlead",
+        "achievementsKeys": [
+          "experience.companies.acceleralia.achievements.techlead"
+        ]
+      },
+      {
+        "titleKey": "experience.companies.acceleralia.positions.parttime",
+        "period": "Oct 2022 - Jul 2025",
+        "descriptionKey": "experience.companies.acceleralia.descriptions.parttime",
+        "achievementsKeys": [
+          "experience.companies.acceleralia.achievements.parttime"
+        ]
+      }
+    ]
+  }
+]

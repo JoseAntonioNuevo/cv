@@ -42,9 +42,9 @@ export const translations = {
           },
           achievements: {
             fullstack:
-              "Built microservices architecture for marketplace platform, implemented real-time inventory management system, developed RESTful APIs and GraphQL endpoints, improved platform performance by 40%",
+              "Building and optimizing web applications using Next.js 15 for server-side rendering, static site generation, and enhanced SEO performance. Developing dynamic, user-friendly interfaces with React 19 and maintaining reusable, modular components. Writing robust, type-safe code with TypeScript to improve code maintainability and collaboration. Implementing rigorous testing methodologies, including unit and integration testing, to ensure application reliability and performance. Working on a marketplace platform, integrating Stripe for seamless payment processing and subscription management. Developing and maintaining a SaaS platform with a focus on scalability, performance optimization, and a user-centric approach. Optimizing applications for search engines, implementing SEO best practices such as metadata management, server-side rendering, structured data, and improving site performance.",
             techlead:
-              "Leading cross-functional teams, designing scalable systems for sustainable marketplace, mentoring developers and establishing best practices, driving architectural decisions and technology adoption",
+              "Leading cross-functional development teams while maintaining hands-on technical contributions to the sustainable marketplace platform. Designing and architecting scalable systems and microservices infrastructure. Mentoring engineers across all levels, establishing coding standards, and driving best practices adoption. Coordinating technical roadmap alignment with business objectives, managing project delivery timelines, and fostering collaborative team culture. Spearheading technology evaluation and adoption decisions while ensuring system reliability and performance optimization.",
           },
         },
         acceleralia: {
@@ -64,9 +64,9 @@ export const translations = {
           },
           achievements: {
             fullstack:
-              "Built responsive web applications from scratch, implemented authentication and authorization systems, integrated third-party APIs and payment gateways",
+              "Full-stack web development with Laravel, JavaScript, and Vue.js, focusing on building dynamic, scalable, and user-centric applications. Designing, creating, and managing MySQL databases to ensure optimal performance and data integrity. Utilizing GitHub for version control, enabling efficient collaboration and streamlined development workflows. Setting up, managing, and maintaining Amazon Web Services (AWS) infrastructure, including EC2 instances and RDS databases, to ensure scalability, security, and high availability. Implementing unit and integration testing to guarantee robust, reliable, and high-quality code.",
             techlead:
-              "Managed team of 8 developers across multiple projects, established coding standards and review processes, introduced agile methodologies improving delivery time by 30%",
+              "Led cross-functional development team of 8 engineers, establishing technical vision and architectural decisions. Mentored junior developers while driving code quality through structured review processes and best practices implementation. Coordinated multiple concurrent projects, optimizing resource allocation and delivery timelines. Championed agile methodologies and DevOps practices, resulting in 30% improvement in delivery efficiency and team productivity.",
             parttime:
               "Maintained critical client applications, provided technical consultancy for ongoing projects, ensured smooth knowledge transfer to new team members",
           },
@@ -320,9 +320,9 @@ export const translations = {
           },
           achievements: {
             fullstack:
-              "Construí arquitectura de microservicios para plataforma de marketplace, implementé sistema de gestión de inventario en tiempo real, desarrollé APIs RESTful y endpoints GraphQL, mejoré el rendimiento de la plataforma en un 40%",
+              "Construcción y optimización de aplicaciones web usando Next.js 15 para renderizado del lado del servidor, generación de sitios estáticos y rendimiento SEO mejorado. Desarrollo de interfaces dinámicas y amigables con React 19 y mantenimiento de componentes reutilizables y modulares. Escritura de código robusto y type-safe con TypeScript para mejorar la mantenibilidad del código y colaboración. Implementación de metodologías de testing rigurosas, incluyendo pruebas unitarias e integración, para asegurar confiabilidad y rendimiento de aplicaciones. Trabajo en plataforma marketplace, integrando Stripe para procesamiento de pagos fluido y gestión de suscripciones. Desarrollo y mantenimiento de plataforma SaaS enfocada en escalabilidad, optimización de rendimiento y enfoque centrado en el usuario. Optimización de aplicaciones para motores de búsqueda, implementando mejores prácticas SEO como gestión de metadata, renderizado del lado del servidor, datos estructurados y mejora del rendimiento del sitio.",
             techlead:
-              "Liderando equipos multifuncionales, diseñando sistemas escalables para marketplace sostenible, mentoreando desarrolladores y estableciendo mejores prácticas, impulsando decisiones arquitectónicas y adopción de tecnologías",
+              "Liderando equipos de desarrollo multifuncionales mientras mantengo contribuciones técnicas directas a la plataforma marketplace sostenible. Diseño y arquitectura de sistemas escalables e infraestructura de microservicios. Mentoría de ingenieros de todos los niveles, establecimiento de estándares de código e impulso de adopción de mejores prácticas. Coordinación de alineación de roadmap técnico con objetivos de negocio, gestión de cronogramas de entrega de proyectos y fomento de cultura colaborativa del equipo. Liderando evaluación de tecnologías y decisiones de adopción mientras aseguro confiabilidad del sistema y optimización del rendimiento.",
           },
         },
         acceleralia: {
@@ -342,9 +342,9 @@ export const translations = {
           },
           achievements: {
             fullstack:
-              "Construí aplicaciones web responsivas desde cero, implementé sistemas de autenticación y autorización, integré APIs de terceros y pasarelas de pago",
+              "Desarrollo web full-stack con Laravel, JavaScript y Vue.js, enfocándome en construir aplicaciones dinámicas, escalables y centradas en el usuario. Diseño, creación y gestión de bases de datos MySQL para garantizar rendimiento óptimo e integridad de datos. Utilización de GitHub para control de versiones, permitiendo colaboración eficiente y flujos de trabajo de desarrollo optimizados. Configuración, gestión y mantenimiento de infraestructura de Amazon Web Services (AWS), incluyendo instancias EC2 y bases de datos RDS, para asegurar escalabilidad, seguridad y alta disponibilidad. Implementación de pruebas unitarias e integración para garantizar código robusto, confiable y de alta calidad.",
             techlead:
-              "Gestioné equipo de 8 desarrolladores en múltiples proyectos, establecí estándares de código y procesos de revisión, introduje metodologías ágiles mejorando el tiempo de entrega en un 30%",
+              "Lideré equipo multifuncional de desarrollo de 8 ingenieros, estableciendo visión técnica y decisiones arquitectónicas. Mentoré desarrolladores junior mientras impulsaba la calidad del código a través de procesos de revisión estructurados e implementación de mejores prácticas. Coordiné múltiples proyectos concurrentes, optimizando la asignación de recursos y cronogramas de entrega. Impulsé metodologías ágiles y prácticas DevOps, resultando en 30% de mejora en eficiencia de entrega y productividad del equipo.",
             parttime:
               "Mantuve aplicaciones críticas de clientes, proporcioné consultoría técnica para proyectos en curso, aseguré transferencia de conocimiento fluida a nuevos miembros del equipo",
           },
