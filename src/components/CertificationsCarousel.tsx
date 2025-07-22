@@ -28,6 +28,10 @@ export default function CertificationsCarousel({
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  
+  // Touch/swipe state
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
 
   // Check if mobile screen
   useEffect(() => {
@@ -74,6 +78,46 @@ export default function CertificationsCarousel({
     setCurrentIndex(index);
   };
 
+  // Touch handlers for mobile swipe
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+    // Pause auto-rotation during touch interaction
+    if (isMobile) {
+      setIsPaused(true);
+    }
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) {
+      // Resume auto-rotation after touch ends
+      if (isMobile) {
+        setIsPaused(false);
+      }
+      return;
+    }
+    
+    const distance = touchStart - touchEnd;
+    const minSwipeDistance = 50;
+    
+    if (distance > minSwipeDistance) {
+      // Swiped left - go to next slide
+      goToNext();
+    } else if (distance < -minSwipeDistance) {
+      // Swiped right - go to previous slide
+      goToPrevious();
+    }
+    
+    // Resume auto-rotation after swipe
+    if (isMobile) {
+      setTimeout(() => setIsPaused(false), 1000); // Brief pause before resuming
+    }
+  };
+
   if (certifications.length === 0) return null;
 
   return (
@@ -82,26 +126,32 @@ export default function CertificationsCarousel({
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
-      <div className="overflow-hidden rounded-xl">
+      <div 
+        className={`overflow-hidden rounded-xl ${isMobile ? 'touch-pan-y select-none' : ''}`}
+        onTouchStart={isMobile ? handleTouchStart : undefined}
+        onTouchMove={isMobile ? handleTouchMove : undefined}
+        onTouchEnd={isMobile ? handleTouchEnd : undefined}
+        style={isMobile ? { touchAction: 'pan-y' } : undefined}
+      >
         <div
           className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
           {groupedCertifications.map((group, slideIndex) => (
             <div key={slideIndex} className={`w-full flex-shrink-0 ${isMobile ? 'px-2' : 'px-4'}`}>
-              <div className={`grid gap-6 ${isMobile ? 'grid-cols-1' : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'}`}>
+              <div className={`grid gap-6 ${isMobile ? 'grid-cols-1 grid-rows-1' : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'} auto-rows-fr`}>
                 {group.map((cert) => (
-                  <div key={cert.id} className={`group relative bg-white dark:bg-gray-900 rounded-xl shadow-xl overflow-hidden ${isMobile ? 'w-full' : 'mx-auto max-w-lg'}`}>
+                  <div key={cert.id} className="group relative bg-white dark:bg-gray-900 rounded-xl shadow-xl overflow-hidden flex flex-col">
                     <div
                       className={`absolute inset-0 bg-gradient-to-br from-indigo-400 to-purple-600 opacity-0 group-hover:opacity-5 transition-opacity duration-300`}
                     ></div>
 
                     {/* Academy Image Header */}
-                    <div className={`relative bg-gray-100 dark:bg-gray-800 flex items-center justify-center ${isMobile ? 'h-20' : 'h-20'}`}>
+                    <div className="relative h-24 bg-gray-100 dark:bg-gray-800 flex items-center justify-center flex-shrink-0">
                       <img
                         src={`/certifications/${cert.institution_image}`}
                         alt={cert.platform}
-                        className={`object-contain opacity-80 ${isMobile ? 'h-12' : 'h-12'}`}
+                        className="h-16 object-contain opacity-80"
                         onError={(e) => {
                           const target = e.target as HTMLImageElement;
                           target.style.display = "none";
@@ -109,8 +159,8 @@ export default function CertificationsCarousel({
                           if (fallback) fallback.style.display = "flex";
                         }}
                       />
-                      <div className={`hidden rounded-full bg-gradient-to-br from-gray-300 to-gray-500 dark:from-gray-600 dark:to-gray-700 items-center justify-center ${isMobile ? 'h-12 w-12' : 'h-12 w-12'}`}>
-                        <FaCertificate className={`text-white ${isMobile ? 'w-6 h-6' : 'w-6 h-6'}`} />
+                      <div className="hidden h-16 w-16 rounded-full bg-gradient-to-br from-gray-300 to-gray-500 dark:from-gray-600 dark:to-gray-700 items-center justify-center">
+                        <FaCertificate className="w-8 h-8 text-white" />
                       </div>
                       <div className="absolute top-2 right-2">
                         <span className="text-xs font-medium text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 px-2 py-1 rounded-full">
@@ -119,30 +169,30 @@ export default function CertificationsCarousel({
                       </div>
                     </div>
 
-                    <div className={`relative ${isMobile ? 'p-4' : 'p-4'}`}>
-                      <h3 className={`font-bold text-gray-900 dark:text-white text-center mb-2 leading-tight ${isMobile ? 'text-lg' : 'text-lg'}`}>
+                    <div className="relative p-6 flex flex-col flex-grow">
+                      <h3 className="text-xl font-bold text-gray-900 dark:text-white text-center mb-2 leading-tight">
                         {cert.certification_title}
                       </h3>
-
-                      <div className="text-center mb-3">
-                        <p className="text-sm font-medium text-indigo-600 dark:text-indigo-400">
+                      
+                      <div className="text-center mb-4">
+                        <p className="text-sm font-medium text-indigo-600 dark:text-indigo-400 mb-1">
                           {cert.platform}
                         </p>
                       </div>
 
-                      <p className={`text-sm text-gray-600 dark:text-gray-300 text-center leading-relaxed mb-4 ${isMobile ? 'line-clamp-2' : 'line-clamp-2'}`}>
+                      <p className="text-sm text-gray-600 dark:text-gray-300 text-center leading-relaxed mb-6 flex-grow">
                         {cert.description}
                       </p>
-
-                      <div className="flex justify-center">
+                      
+                      <div className="flex justify-center mt-auto">
                         <a
                           href={cert.certification_url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className={`inline-flex items-center gap-2 text-sm font-medium text-white bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg hover:from-indigo-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105 shadow-lg ${isMobile ? 'px-4 py-2' : 'px-4 py-2'}`}
+                          className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium text-white bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg hover:from-indigo-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105 shadow-lg"
                           aria-label={`${verifyText} ${cert.certification_title}`}
                         >
-                          <FaExternalLinkAlt className={`${isMobile ? 'w-3 h-3' : 'w-3 h-3'}`} />
+                          <FaExternalLinkAlt className="w-3.5 h-3.5" />
                           {verifyText}
                         </a>
                       </div>
@@ -157,34 +207,26 @@ export default function CertificationsCarousel({
 
       {totalSlides > 1 && (
         <>
-          {/* Navigation buttons - positioned differently on mobile */}
-          <button
-            onClick={goToPrevious}
-            className={`absolute top-1/2 -translate-y-1/2 bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-all duration-200 group rounded-full ${
-              isMobile 
-                ? 'left-2 p-2' 
-                : 'left-0 -translate-x-12 p-3'
-            }`}
-            aria-label="Previous certifications"
-          >
-            <FaChevronLeft className={`text-gray-600 dark:text-gray-300 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 ${
-              isMobile ? 'w-4 h-4' : 'w-5 h-5'
-            }`} />
-          </button>
+          {/* Navigation buttons - only show on desktop/tablet */}
+          {!isMobile && (
+            <>
+              <button
+                onClick={goToPrevious}
+                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 bg-white dark:bg-gray-800 p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 group"
+                aria-label="Previous certifications"
+              >
+                <FaChevronLeft className="w-5 h-5 text-gray-600 dark:text-gray-300 group-hover:text-indigo-600 dark:group-hover:text-indigo-400" />
+              </button>
 
-          <button
-            onClick={goToNext}
-            className={`absolute top-1/2 -translate-y-1/2 bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-all duration-200 group rounded-full ${
-              isMobile 
-                ? 'right-2 p-2' 
-                : 'right-0 translate-x-12 p-3'
-            }`}
-            aria-label="Next certifications"
-          >
-            <FaChevronRight className={`text-gray-600 dark:text-gray-300 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 ${
-              isMobile ? 'w-4 h-4' : 'w-5 h-5'
-            }`} />
-          </button>
+              <button
+                onClick={goToNext}
+                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 bg-white dark:bg-gray-800 p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 group"
+                aria-label="Next certifications"
+              >
+                <FaChevronRight className="w-5 h-5 text-gray-600 dark:text-gray-300 group-hover:text-indigo-600 dark:group-hover:text-indigo-400" />
+              </button>
+            </>
+          )}
 
           {/* Pagination dots */}
           <div className={`flex justify-center gap-2 ${isMobile ? 'mt-6' : 'mt-8'}`}>
