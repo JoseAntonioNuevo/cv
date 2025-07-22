@@ -81,6 +81,7 @@ export const translations = {
       period: "Period",
       seeMore: "See more",
       seeLess: "See less",
+      viewCertificate: "View Certificate",
       studies: {
         fullstackMasters: {
           degree: "FullStack Web Masters",
@@ -361,6 +362,7 @@ export const translations = {
       period: "Período",
       seeMore: "Ver más",
       seeLess: "Ver menos",
+      viewCertificate: "Ver Certificado",
       studies: {
         fullstackMasters: {
           degree: "FullStack Web Masters",

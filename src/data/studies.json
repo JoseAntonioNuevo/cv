@@ -6,7 +6,8 @@
     "year_key": "education.studies.fullstackMasters.year",
     "description_key": "education.studies.fullstackMasters.description",
     "icon": "🎓",
-    "logo": "/education/threepoints.webp"
+    "logo": "/education/threepoints.webp",
+    "certificate_url": "https://certtun.vottun.com/badgedetail?id=b5477ae3-d2f4-4e7b-b734-92962b8529ab"
   },
   {
     "id": "dam",
