@@ -33,18 +33,6 @@ export default function CertificationsCarousel({
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
 
-  // Check if mobile screen
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768); // md breakpoint
-    };
-    
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
-
   // Dynamic items per slide based on screen size
   const itemsPerSlide = isMobile ? 1 : 3;
   const totalSlides = Math.ceil(certifications.length / itemsPerSlide);
@@ -53,6 +41,33 @@ export default function CertificationsCarousel({
   for (let i = 0; i < certifications.length; i += itemsPerSlide) {
     groupedCertifications.push(certifications.slice(i, i + itemsPerSlide));
   }
+
+  // Check if mobile screen and reset carousel when changing
+  useEffect(() => {
+    const checkMobile = () => {
+      const newIsMobile = window.innerWidth < 768; // md breakpoint
+      const wasChanged = newIsMobile !== isMobile;
+      
+      setIsMobile(newIsMobile);
+      
+      // Reset carousel position when switching between mobile/desktop
+      if (wasChanged) {
+        setCurrentIndex(0);
+      }
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, [isMobile]);
+
+  // Additional safety check: ensure currentIndex is within bounds
+  useEffect(() => {
+    if (currentIndex >= totalSlides) {
+      setCurrentIndex(0);
+    }
+  }, [currentIndex, totalSlides]);
 
   useEffect(() => {
     if (!isPaused && totalSlides > 1) {
