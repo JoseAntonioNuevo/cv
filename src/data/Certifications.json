@@ -1,0 +1,194 @@
+[
+  {
+    "certification_title": "Backend con Node.js: API REST con Express.js",
+    "description": "Curso sobre backend con Node.js y Express.js",
+    "institution_image": "platzi.webp",
+    "certification_url": "https://platzi.com/p/joseantonionuevo/curso/2485-course/diploma/detalle/",
+    "year": 2022,
+    "platform": "Platzi"
+  },
+  {
+    "certification_title": "Curso de Backend con Node.js: Autenticación con Passport.js y JWT",
+    "description": "Curso sobre autenticación en backend con Passport.js y JWT",
+    "institution_image": "platzi.webp",
+    "certification_url": "https://platzi.com/p/joseantonionuevo/curso/2489-passport/diploma/detalle/",
+    "year": 2022,
+    "platform": "Platzi"
+  },
+  {
+    "certification_title": "Curso de Backend con Node.js: Base de Datos con PostgreSQL",
+    "description": "Curso de base de datos con PostgreSQL para backend con Node.js",
+    "institution_image": "platzi.webp",
+    "certification_url": "https://platzi.com/p/joseantonionuevo/curso/2507-backend-nodejs-postgres/diploma/detalle/",
+    "year": 2022,
+    "platform": "Platzi"
+  },
+  {
+    "certification_title": "Curso de React Avanzado",
+    "description": "Curso avanzado de React",
+    "institution_image": "platzi.webp",
+    "certification_url": "https://platzi.com/p/joseantonionuevo/curso/1601-react-avanzado/diploma/detalle/",
+    "year": 2022,
+    "platform": "Platzi"
+  },
+  {
+    "certification_title": "M001: MongoDB Basics",
+    "description": "Curso básico de MongoDB",
+    "institution_image": "mongodb.webp",
+    "certification_url": "https://university.mongodb.com/course_completion/8185abb5-8452-457f-ac6a-54517df49be7?utm_source=copy&utm_medium=social&utm_campaign=university_social_sharing",
+    "year": 2022,
+    "platform": "MongoDB"
+  },
+  {
+    "certification_title": "M100: MongoDB for SQL Pros",
+    "description": "Curso para profesionales de SQL para aprender MongoDB",
+    "institution_image": "mongodb.webp",
+    "certification_url": "https://university.mongodb.com/course_completion/035fc1af-7040-48c9-84eb-5adfd05f988c?utm_source=copy&utm_medium=social&utm_campaign=university_social_sharing",
+    "year": 2022,
+    "platform": "MongoDB"
+  },
+  {
+    "certification_title": "M103: Basic Cluster Administration",
+    "description": "Curso sobre administración básica de clústeres en MongoDB",
+    "institution_image": "mongodb.webp",
+    "certification_url": "https://university.mongodb.com/course_completion/69d86d37-4457-4f01-a53a-06970176394b?utm_source=copy&utm_medium=social&utm_campaign=university_social_sharing",
+    "year": 2022,
+    "platform": "MongoDB"
+  },
+  {
+    "certification_title": "Laravel 8 Professional Course",
+    "description": "Curso profesional de Laravel 8",
+    "institution_image": "codigofacilito.webp",
+    "certification_url": "https://codigofacilito.com/certificates/49516.pdf",
+    "year": 2022,
+    "platform": "Código Facilito"
+  },
+  {
+    "certification_title": "React Professional Course",
+    "description": "Professional course in React.js",
+    "institution_image": "codigofacilito.webp",
+    "certification_url": "https://codigofacilito.com/certificates/50126.pdf",
+    "year": 2022,
+    "platform": "Código Facilito"
+  },
+  {
+    "certification_title": "React Router V6",
+    "description": "Course on React Router V6",
+    "institution_image": "codigofacilito.webp",
+    "certification_url": "https://codigofacilito.com/certificates/50180.pdf",
+    "year": 2022,
+    "platform": "Código Facilito"
+  },
+  {
+    "certification_title": "Vue Professional Course",
+    "description": "Professional course in Vue.js",
+    "institution_image": "codigofacilito.webp",
+    "certification_url": "https://codigofacilito.com/certificates/49802.pdf",
+    "year": 2022,
+    "platform": "Código Facilito"
+  },
+  {
+    "certification_title": "Web Accessibility Course",
+    "description": "Course on web accessibility",
+    "institution_image": "codigofacilito.webp",
+    "certification_url": "https://codigofacilito.com/certificates/49538.pdf",
+    "year": 2022,
+    "platform": "Código Facilito"
+  },
+  {
+    "certification_title": "Bootstrap 4 ultimate Course",
+    "description": "Ultimate course on Bootstrap 4",
+    "institution_image": "udemy.webp",
+    "certification_url": "https://www.udemy.com/certificate/UC-45db897a-59b5-46e9-9250-e40ae1954d9b/",
+    "year": 2021,
+    "platform": "Udemy"
+  },
+  {
+    "certification_title": "Typescript from 0 to 100",
+    "description": "Complete course on Typescript",
+    "institution_image": "udemy.webp",
+    "certification_url": "https://www.udemy.com/certificate/UC-606a99db-ed31-4c8c-ad61-ae31f0d054aa/",
+    "year": 2021,
+    "platform": "Udemy"
+  },
+  {
+    "certification_title": "Laravel 8 in AWS",
+    "description": "Course on Laravel 8 deployment in AWS",
+    "institution_image": "udemy.webp",
+    "certification_url": "https://udemy-certificate.s3.amazonaws.com/image/UC-b7a7fb9b-678c-4cb0-b950-f8e05a8d74b6.jpg",
+    "year": 2021,
+    "platform": "Udemy"
+  },
+  {
+    "certification_title": "Curso JavaServer Faces",
+    "description": "Course on JavaServer Faces",
+    "institution_image": "openwebinars.webp",
+    "certification_url": "https://openwebinars.net/certificado/kvwB3peV",
+    "year": 2020,
+    "platform": "OpenWebinars"
+  },
+  {
+    "certification_title": "Hibernate y JPA",
+    "description": "Course on Hibernate and JPA",
+    "institution_image": "openwebinars.webp",
+    "certification_url": "https://openwebinars.net/certificado/axWyjO2V",
+    "year": 2020,
+    "platform": "OpenWebinars"
+  },
+  {
+    "certification_title": "JavaScript Profesional",
+    "description": "Professional course on JavaScript",
+    "institution_image": "openwebinars.webp",
+    "certification_url": "https://openwebinars.net/certificado/4Vkr8AWo",
+    "year": 2020,
+    "platform": "OpenWebinars"
+  },
+  {
+    "certification_title": "Programador Java Web",
+    "description": "Course for Java Web Developers",
+    "institution_image": "openwebinars.webp",
+    "certification_url": "https://openwebinars.net/cert/0W4a5",
+    "year": 2020,
+    "platform": "OpenWebinars"
+  },
+  {
+    "certification_title": "Curso de Git",
+    "description": "Curso sobre control de versiones con Git",
+    "institution_image": "openwebinars.webp",
+    "certification_url": "https://openwebinars.net/certificado/Xx3pWyjo",
+    "year": 2020,
+    "platform": "OpenWebinars"
+  },
+  {
+    "certification_title": "Python 3",
+    "description": "Curso de programación en Python 3",
+    "institution_image": "openwebinars.webp",
+    "certification_url": "https://openwebinars.net/certificado/exbDlnJV",
+    "year": 2020,
+    "platform": "OpenWebinars"
+  },
+  {
+    "certification_title": "Java 8 desde Cero",
+    "description": "Curso de programación Java 8 desde fundamentos",
+    "institution_image": "openwebinars.webp",
+    "certification_url": "https://openwebinars.net/certificado/ZoLJE16v",
+    "year": 2020,
+    "platform": "OpenWebinars"
+  },
+  {
+    "certification_title": "Java 8 para programadores Java",
+    "description": "Curso avanzado de Java 8 para desarrolladores",
+    "institution_image": "openwebinars.webp",
+    "certification_url": "https://openwebinars.net/certificado/LVywbyQx",
+    "year": 2020,
+    "platform": "OpenWebinars"
+  },
+  {
+    "certification_title": "Ruby desde Cero",
+    "description": "Curso de programación Ruby desde fundamentos",
+    "institution_image": "openwebinars.webp",
+    "certification_url": "https://openwebinars.net/certificado/Qv02jAko",
+    "year": 2020,
+    "platform": "OpenWebinars"
+  }
+]
