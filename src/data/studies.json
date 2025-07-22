@@ -1,0 +1,38 @@
+[
+  {
+    "id": "fullstack_masters",
+    "degree_key": "education.studies.fullstackMasters.degree",
+    "institution_key": "education.studies.fullstackMasters.institution",
+    "year_key": "education.studies.fullstackMasters.year",
+    "description_key": "education.studies.fullstackMasters.description",
+    "icon": "🎓",
+    "logo": "/education/threepoints.webp"
+  },
+  {
+    "id": "dam",
+    "degree_key": "education.studies.dam.degree",
+    "institution_key": "education.studies.dam.institution",
+    "year_key": "education.studies.dam.year",
+    "description_key": "education.studies.dam.description",
+    "icon": "💻",
+    "logo": "/education/uoc.webp"
+  },
+  {
+    "id": "daw",
+    "degree_key": "education.studies.daw.degree",
+    "institution_key": "education.studies.daw.institution",
+    "year_key": "education.studies.daw.year",
+    "description_key": "education.studies.daw.description",
+    "icon": "🌐",
+    "logo": "/education/jesuites.webp"
+  },
+  {
+    "id": "bachillerato",
+    "degree_key": "education.studies.bachillerato.degree",
+    "institution_key": "education.studies.bachillerato.institution",
+    "year_key": "education.studies.bachillerato.year",
+    "description_key": "education.studies.bachillerato.description",
+    "icon": "📚",
+    "logo": "/education/jesuites.webp"
+  }
+]

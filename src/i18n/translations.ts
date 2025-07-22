@@ -79,13 +79,15 @@ export const translations = {
       degree: "Degree",
       institution: "Institution",
       period: "Period",
+      seeMore: "See more",
+      seeLess: "See less",
       studies: {
         fullstackMasters: {
           degree: "FullStack Web Masters",
           institution: "ThreePoints - The School for Digital Business",
           year: "2022",
           description:
-            "Advanced specialization in full-stack web development, focusing on modern technologies and best practices",
+            "Pursuing a Master's Degree in Full Stack Web Development with a focus on modern technologies and best practices:\n\n• Developing dynamic and responsive front-end applications using React\n• Building efficient and scalable back-end services with Node.js and API development\n• Managing and administering both SQL and NoSQL databases for optimized data handling and storage\n• Gaining expertise in AWS Cloud Administration to implement reliable and scalable cloud solutions\n• Writing clean, type-safe code with TypeScript for improved maintainability and collaboration\n• Utilizing Docker for containerization and streamlined deployment processes\n• Implementing CI/CD pipelines using Jenkins to automate workflows and enhance development efficiency",
         },
         dam: {
           degree:
@@ -93,21 +95,21 @@ export const translations = {
           institution: "Universitat Oberta de Catalunya (UOC)",
           year: "2021",
           description:
-            "Comprehensive training in software development for multiple platforms including web, mobile, and desktop applications",
+            "Comprehensive training in multiplatform application development with hands-on experience across diverse technologies:\n\n• Developing applications and video games for Android using C# with Unity and Java through Android Studio\n• Implementing ERP systems to optimize business processes and workflows\n• Focusing on computer security in application development across web, desktop, and Android platforms\n• Creating and maintaining applications using the .NET framework for diverse business needs\n• Implementing Internet of Things (IoT) solutions to integrate smart devices and enhance functionality\n• Designing and developing immersive VR and AR video games, leveraging cutting-edge technologies for interactive experiences",
         },
         daw: {
           degree: "Higher Degree in Web Application Development (DAW)",
           institution: "Jesuïtes Bellvitge",
           year: "2020",
           description:
-            "Specialized training in web application development, both front-end and back-end technologies",
+            "Comprehensive training in full-stack web application development with extensive hands-on experience in industry-standard technologies:\n\n• Mastering server-side development with PHP for dynamic web applications and robust backend solutions\n• Building modern web applications using the Laravel framework with MVC architecture and advanced features like Eloquent ORM, middleware, and authentication systems\n• Implementing comprehensive database solutions with MySQL for data storage, optimization, and complex query management\n• Developing interactive and responsive front-end interfaces using JavaScript, DOM manipulation, and modern ES6+ features\n• Gaining proficiency in Linux server administration for web hosting, command-line operations, and deployment environments\n• Creating secure web applications with proper validation, sanitization, and protection against common vulnerabilities\n• Implementing RESTful APIs and web services for seamless system integration and data exchange",
         },
         bachillerato: {
           degree: "Bachillerato (High School Diploma)",
           institution: "Jesuïtes Bellvitge",
           year: "2018",
           description:
-            "Scientific and technological branch with focus on mathematics and computer science",
+            "Scientific-technological track emphasizing advanced mathematics, physics, and computer science fundamentals. Developed strong analytical and problem-solving skills through calculus, linear algebra, and discrete mathematics. Gained foundational programming knowledge in C++ and Python. Studied computer architecture, algorithms, and data structures. Participated in technology projects and competitions, fostering teamwork and innovation. Built a solid foundation for pursuing higher education in computer science and engineering fields.",
         },
       },
     },
@@ -357,13 +359,15 @@ export const translations = {
       degree: "Título",
       institution: "Institución",
       period: "Período",
+      seeMore: "Ver más",
+      seeLess: "Ver menos",
       studies: {
         fullstackMasters: {
           degree: "FullStack Web Masters",
           institution: "ThreePoints - The School for Digital Business",
           year: "2022",
           description:
-            "Especialización avanzada en desarrollo web full-stack, enfocada en tecnologías modernas y mejores prácticas",
+            "Cursando un Máster en Desarrollo Web Full Stack con enfoque en tecnologías modernas y mejores prácticas:\n\n• Desarrollando aplicaciones front-end dinámicas y responsivas usando React\n• Construyendo servicios back-end eficientes y escalables con Node.js y desarrollo de APIs\n• Gestionando y administrando bases de datos SQL y NoSQL para un manejo y almacenamiento optimizado de datos\n• Adquiriendo experiencia en Administración Cloud AWS para implementar soluciones cloud confiables y escalables\n• Escribiendo código limpio y tipado con TypeScript para mejorar el mantenimiento y la colaboración\n• Utilizando Docker para contenerización y procesos de despliegue optimizados\n• Implementando pipelines CI/CD usando Jenkins para automatizar flujos de trabajo y mejorar la eficiencia del desarrollo",
         },
         dam: {
           degree:
@@ -371,21 +375,21 @@ export const translations = {
           institution: "Universitat Oberta de Catalunya (UOC)",
           year: "2021",
           description:
-            "Formación integral en desarrollo de software para múltiples plataformas incluyendo aplicaciones web, móviles y de escritorio",
+            "Formación integral en desarrollo de aplicaciones multiplataforma con experiencia práctica en diversas tecnologías:\n\n• Desarrollo de aplicaciones y videojuegos para Android usando C# con Unity y Java a través de Android Studio\n• Implementación de sistemas ERP para optimizar procesos y flujos de trabajo empresariales\n• Enfoque en seguridad informática en el desarrollo de aplicaciones web, de escritorio y Android\n• Creación y mantenimiento de aplicaciones usando el framework .NET para diversas necesidades empresariales\n• Implementación de soluciones de Internet de las Cosas (IoT) para integrar dispositivos inteligentes y mejorar la funcionalidad\n• Diseño y desarrollo de videojuegos inmersivos de VR y AR, aprovechando tecnologías de vanguardia para experiencias interactivas",
         },
         daw: {
           degree: "Grado Superior en Desarrollo de Aplicaciones Web (DAW)",
           institution: "Jesuïtes Bellvitge",
           year: "2020",
           description:
-            "Formación especializada en desarrollo de aplicaciones web, tecnologías front-end y back-end",
+            "Formación integral en desarrollo de aplicaciones web full-stack con extensa experiencia práctica en tecnologías estándar de la industria:\n\n• Dominio del desarrollo del lado del servidor con PHP para aplicaciones web dinámicas y soluciones backend robustas\n• Construcción de aplicaciones web modernas usando el framework Laravel con arquitectura MVC y características avanzadas como Eloquent ORM, middleware y sistemas de autenticación\n• Implementación de soluciones de base de datos integrales con MySQL para almacenamiento de datos, optimización y gestión de consultas complejas\n• Desarrollo de interfaces front-end interactivas y responsivas usando JavaScript, manipulación del DOM y características modernas de ES6+\n• Adquisición de competencias en administración de servidores Linux para alojamiento web, operaciones de línea de comandos y entornos de despliegue\n• Creación de aplicaciones web seguras con validación, sanitización y protección adecuadas contra vulnerabilidades comunes\n• Implementación de APIs RESTful y servicios web para integración de sistemas e intercambio de datos sin problemas",
         },
         bachillerato: {
           degree: "Bachillerato",
           institution: "Jesuïtes Bellvitge",
           year: "2018",
           description:
-            "Rama científica y tecnológica con enfoque en matemáticas e informática",
+            "Modalidad científico-tecnológica con énfasis en matemáticas avanzadas, física y fundamentos de informática. Desarrollo de fuertes habilidades analíticas y de resolución de problemas a través de cálculo, álgebra lineal y matemáticas discretas. Adquisición de conocimientos fundamentales de programación en C++ y Python. Estudio de arquitectura de computadores, algoritmos y estructuras de datos. Participación en proyectos tecnológicos y competiciones, fomentando el trabajo en equipo y la innovación. Construcción de una base sólida para continuar estudios superiores en ciencias de la computación e ingeniería.",
         },
       },
     },

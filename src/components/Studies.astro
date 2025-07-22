@@ -1,5 +1,6 @@
 ---
 import { useTranslations, getLangFromUrl } from '../i18n/utils';
+import studiesData from '../data/studies.json';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -13,44 +14,14 @@ interface Study {
   logo?: string;
 }
 
-function getStudies(t: any): Study[] {
-  return [
-    {
-      degree: t('education.studies.fullstackMasters.degree'),
-      institution: t('education.studies.fullstackMasters.institution'),
-      year: t('education.studies.fullstackMasters.year'),
-      description: t('education.studies.fullstackMasters.description'),
-      icon: '🎓',
-      logo: '/education/threepoints.webp'
-    },
-    {
-      degree: t('education.studies.dam.degree'),
-      institution: t('education.studies.dam.institution'),
-      year: t('education.studies.dam.year'),
-      description: t('education.studies.dam.description'),
-      icon: '💻',
-      logo: '/education/uoc.webp'
-    },
-    {
-      degree: t('education.studies.daw.degree'),
-      institution: t('education.studies.daw.institution'),
-      year: t('education.studies.daw.year'),
-      description: t('education.studies.daw.description'),
-      icon: '🌐',
-      logo: '/education/jesuites.webp'
-    },
-    {
-      degree: t('education.studies.bachillerato.degree'),
-      institution: t('education.studies.bachillerato.institution'),
-      year: t('education.studies.bachillerato.year'),
-      description: t('education.studies.bachillerato.description'),
-      icon: '📚',
-      logo: '/education/jesuites.webp'
-    }
-  ];
-}
-
-const studies = getStudies(t);
+const studies: Study[] = studiesData.map(study => ({
+  degree: t(study.degree_key),
+  institution: t(study.institution_key),
+  year: t(study.year_key),
+  description: t(study.description_key),
+  icon: study.icon,
+  logo: study.logo
+}));
 ---
 
 <section id="education" class="education-section py-12 sm:py-16 px-4">
@@ -119,9 +90,18 @@ const studies = getStudies(t);
                     </div>
                   </div>
 
-                  <p class="text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed">
-                    {study.description}
-                  </p>
+                  <div class="study-description-container">
+                    <div class="text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed study-description" data-full-text={study.description}>
+                      <div class="description-preview"></div>
+                      <div class="description-full hidden whitespace-pre-line"></div>
+                    </div>
+                    <button class="see-more-btn mt-3 inline-flex items-center gap-1 text-sm font-medium text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-md px-1">
+                      <span class="btn-text">{t('education.seeMore')}</span>
+                      <svg class="w-3 h-3 transition-transform duration-300 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                      </svg>
+                    </button>
+                  </div>
                 </div>
 
                 <!-- Decorative gradient -->
@@ -168,4 +148,164 @@ const studies = getStudies(t);
       left: 2rem;
     }
   }
+
+  /* Expandable description styles */
+  .study-description {
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .description-full {
+    line-height: 1.7;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .description-preview {
+    line-height: 1.6;
+  }
+
+  .description-full.expanded {
+    opacity: 1;
+    max-height: 280px;
+    overflow-y: auto;
+    padding-right: 8px;
+  }
+
+  /* Custom scrollbar styling */
+  .description-full.expanded::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .description-full.expanded::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .description-full.expanded::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #3b82f6, #6366f1);
+    border-radius: 2px;
+  }
+
+  .description-full.expanded::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #2563eb, #4f46e5);
+  }
+
+  /* Firefox scrollbar */
+  .description-full.expanded {
+    scrollbar-width: thin;
+    scrollbar-color: #3b82f6 transparent;
+  }
+
+  /* Mobile adjustments for scrollable content */
+  @media (max-width: 768px) {
+    .description-full.expanded {
+      max-height: 240px;
+      padding-right: 6px;
+    }
+    
+    .description-full.expanded::-webkit-scrollbar {
+      width: 3px;
+    }
+  }
+
+  .see-more-btn {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .see-more-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+    transition: left 0.5s;
+  }
+
+  .see-more-btn:hover::before {
+    left: 100%;
+  }
+
+  .chevron.rotated {
+    transform: rotate(180deg);
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .fade-in-up {
+    animation: fadeInUp 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
 </style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Initialize descriptions
+    const descriptions = document.querySelectorAll('.study-description');
+    const seeMoreText = document.documentElement.lang === 'es' ? 'Ver más' : 'See more';
+    const seeLessText = document.documentElement.lang === 'es' ? 'Ver menos' : 'See less';
+    
+    descriptions.forEach((desc) => {
+      const fullText = desc.getAttribute('data-full-text') || '';
+      const previewElement = desc.querySelector('.description-preview');
+      const fullElement = desc.querySelector('.description-full');
+      
+      // Get text before first colon and newline for preview
+      const colonIndex = fullText.indexOf(':');
+      const previewText = colonIndex > 0 && colonIndex < 150 ? 
+        fullText.substring(0, colonIndex + 1) + '...' : 
+        fullText.substring(0, 120) + '...';
+      
+      if (previewElement && fullElement) {
+        previewElement.textContent = previewText;
+        fullElement.textContent = fullText;
+      }
+    });
+
+    // Add click handlers to see more buttons
+    const buttons = document.querySelectorAll('.see-more-btn');
+    
+    buttons.forEach((button) => {
+      button.addEventListener('click', function(this: HTMLButtonElement) {
+        const container = this.closest('.study-description-container') as HTMLElement;
+        const fullElement = container.querySelector('.description-full') as HTMLElement;
+        const previewElement = container.querySelector('.description-preview') as HTMLElement;
+        const btnText = this.querySelector('.btn-text') as HTMLElement;
+        const chevron = this.querySelector('.chevron') as HTMLElement;
+        
+        const isExpanded = fullElement.classList.contains('expanded');
+        
+        if (isExpanded) {
+          // Collapse
+          fullElement.classList.remove('expanded');
+          fullElement.classList.add('hidden');
+          previewElement.classList.remove('hidden');
+          btnText.textContent = seeMoreText;
+          chevron.classList.remove('rotated');
+        } else {
+          // Expand
+          previewElement.classList.add('hidden');
+          fullElement.classList.remove('hidden');
+          // Small delay to ensure DOM update before adding expanded class
+          setTimeout(() => {
+            fullElement.classList.add('expanded', 'fade-in-up');
+          }, 10);
+          btnText.textContent = seeLessText;
+          chevron.classList.add('rotated');
+        }
+      });
+    });
+  });
+</script>
