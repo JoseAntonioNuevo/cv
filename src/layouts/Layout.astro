@@ -72,9 +72,9 @@ const ogImage = `${siteUrl}/me.jpeg`;
         "@type": "Person",
         "name": "Jose Antonio Nuevo",
         "jobTitle": "Tech Lead & Full Stack Developer",
-        "description": "${description}",
-        "url": "${siteUrl}",
-        "image": "${ogImage}",
+        "description": {JSON.stringify(description)},
+        "url": {JSON.stringify(siteUrl)},
+        "image": {JSON.stringify(ogImage)},
         "sameAs": [
           "https://www.linkedin.com/in/jose-antonio-nuevo",
           "https://github.com/JoseAntonioNuevo"
@@ -98,7 +98,7 @@ const ogImage = `${siteUrl}/me.jpeg`;
     <Header />
     <Main />
     <Technologies />
-    <Experience lang={lang} />
+    <Experience />
     <Studies />
     <Certifications />
     <Portfolio />
