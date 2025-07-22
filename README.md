@@ -2,7 +2,7 @@
 
 A modern, multilingual CV/Resume website built with cutting-edge web technologies, featuring full internationalization, dark mode, responsive design, and professional contact functionality.
 
-**Live Website**:[https://joseantonionuevo.tech]
+**Live Website**: [https://joseantonionuevo.tech](https://joseantonionuevo.tech)
 **LinkedIn**: [https://www.linkedin.com/in/jose-antonio-nuevo/](https://www.linkedin.com/in/jose-antonio-nuevo/)  
 **GitHub**: [https://github.com/JoseAntonioNuevo](https://github.com/JoseAntonioNuevo)
 
@@ -48,6 +48,7 @@ This is a fully-developed, professional CV website showcasing 5+ years of experi
 ## 📁 Project Architecture
 
 ```
+```text
 cv/
 ├── public/                          # Static assets
 │   ├── certifications/              # Certification platform logos
@@ -223,7 +224,7 @@ Professional certifications from leading platforms:
 
 ### Contact Methods
 
-- **Email**: joseantonio.nuevo@gmail.com
+- **Email**: [joseantonio.nuevo@gmail.com](mailto:joseantonio.nuevo@gmail.com)
 - **LinkedIn**: Professional networking
 - **GitHub**: Code repositories
 - **Phone**: Available upon request
@@ -374,10 +375,12 @@ Available for:
 
 Interested in collaborating or have a project in mind? I'm always open to discussing new opportunities and challenges.
 
-**Primary Contact**: joseantonio.nuevo@gmail.com  
+**Primary Contact**: [joseantonio.nuevo@gmail.com](mailto:joseantonio.nuevo@gmail.com)  
 **Location**: Barcelona, Spain  
 **Availability**: Open for freelance opportunities
 
 ---
 
-_Built with ❤️ using Astro, React, TypeScript, and Tailwind CSS_
+## Built with ❤️
+
+Using Astro, React, TypeScript, and Tailwind CSS
