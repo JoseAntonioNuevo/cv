@@ -7,6 +7,7 @@ import {
 } from "react-icons/fa";
 
 interface Certification {
+  id: string;
   certification_title: string;
   description: string;
   institution_image: string;
@@ -66,7 +67,7 @@ export default function CertificationsCarousel({
         >
           {certifications.map((cert, index) => {
             return (
-              <div key={index} className="w-full flex-shrink-0 px-4">
+              <div key={cert.id} className="w-full flex-shrink-0 px-4">
                 <div className="group relative bg-white dark:bg-gray-900 rounded-xl shadow-xl mx-auto max-w-lg overflow-hidden">
                   <div
                     className={`absolute inset-0 bg-gradient-to-br from-indigo-400 to-purple-600 opacity-0 group-hover:opacity-5 transition-opacity duration-300`}

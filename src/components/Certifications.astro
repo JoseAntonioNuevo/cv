@@ -6,7 +6,15 @@ import certificationsData from '../data/Certifications.json';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-const certifications = certificationsData;
+const certifications = certificationsData.map(cert => ({
+  id: cert.id,
+  certification_title: t(cert.certification_title_key),
+  description: t(cert.description_key),
+  institution_image: cert.institution_image,
+  certification_url: cert.certification_url,
+  year: cert.year,
+  platform: cert.platform
+}));
 ---
 
 <section id="certifications" class="py-16 bg-gray-50 dark:bg-gray-800">

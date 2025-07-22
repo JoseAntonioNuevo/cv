@@ -123,79 +123,101 @@ export const translations = {
       date: "Date",
       academy: "Academy",
       verify: "View Certificate",
-      badges: {
-        aws: {
-          name: "AWS Certified Solutions Architect - Associate",
-          academy: "Amazon Web Services",
-          issuer: "AWS Training and Certification",
-          date: "2023",
-          description: "Validates expertise in designing and deploying scalable systems on AWS. Covers compute, networking, storage, and database AWS services with focus on cost optimization and security.",
-          image: "/certifications/aws.webp",
-          link: "https://aws.amazon.com/certification/certified-solutions-architect-associate/",
-        },
-        docker: {
-          name: "Docker Certified Associate",
-          academy: "Docker Inc.",
-          issuer: "Docker Certification Program",
-          date: "2022",
-          description: "Demonstrates proficiency with Docker containerization technology, including container orchestration, networking, security, and Docker Compose for multi-container applications.",
-          image: "/certifications/docker.webp",
-          link: "https://training.mirantis.com/certification/dca-certification-exam/",
-        },
-        react: {
-          name: "Meta Front-End Developer Professional Certificate",
-          academy: "Meta",
-          issuer: "Meta via Coursera",
-          date: "2023",
-          description: "Comprehensive program covering React, JavaScript ES6+, HTML/CSS, UI/UX design principles, and modern front-end development practices for building responsive web applications.",
-          image: "/certifications/meta.webp",
-          link: "https://www.coursera.org/professional-certificates/meta-front-end-developer",
-        },
-        gcp: {
-          name: "Google Cloud Professional Developer",
-          academy: "Google Cloud",
-          issuer: "Google Cloud Training",
-          date: "2023",
-          description: "Validates skills in designing, building, and deploying applications on Google Cloud Platform, including cloud-native development and microservices architecture.",
-          image: "/certifications/google.webp",
-          link: "https://cloud.google.com/certification/cloud-developer",
-        },
-        azure: {
-          name: "Microsoft Azure Developer Associate",
-          academy: "Microsoft",
-          issuer: "Microsoft Learn",
-          date: "2022",
-          description: "Demonstrates expertise in developing solutions for Azure, including compute solutions, Azure storage, security implementation, monitoring, and troubleshooting.",
-          image: "/certifications/microsoft.webp",
-          link: "https://docs.microsoft.com/en-us/certifications/azure-developer/",
-        },
-        kubernetes: {
-          name: "Certified Kubernetes Application Developer",
-          academy: "Cloud Native Computing Foundation",
-          issuer: "CNCF",
-          date: "2023",
-          description: "Validates skills in designing and deploying cloud-native applications for Kubernetes, including application lifecycle management and troubleshooting.",
-          image: "/certifications/kubernetes.webp",
-          link: "https://training.linuxfoundation.org/certification/certified-kubernetes-application-developer-ckad/",
-        },
-        fullstack: {
-          name: "Full Stack Web Development Bootcamp",
-          academy: "The Odin Project",
-          issuer: "The Odin Project",
-          date: "2021",
-          description: "Intensive program covering full-stack development with HTML, CSS, JavaScript, Node.js, Express, MongoDB, React, and modern development workflows including Git and testing.",
-          image: "/certifications/coursera.webp",
-          link: "https://www.theodinproject.com/",
-        },
-        typescript: {
-          name: "TypeScript Essential Training",
-          academy: "LinkedIn Learning",
-          issuer: "LinkedIn Learning",
-          date: "2022",
-          description: "Comprehensive training in TypeScript fundamentals, advanced types, generics, decorators, and integration with popular frameworks like React and Node.js.",
-          image: "/certifications/udemy.webp",
-          link: "https://www.linkedin.com/learning/typescript-essential-training",
-        },
+      backend_nodejs_api_rest: {
+        title: "Backend con Node.js: API REST con Express.js",
+        description: "Curso sobre backend con Node.js y Express.js"
+      },
+      backend_nodejs_auth: {
+        title: "Curso de Backend con Node.js: Autenticación con Passport.js y JWT",
+        description: "Curso sobre autenticación en backend con Passport.js y JWT"
+      },
+      backend_nodejs_postgresql: {
+        title: "Curso de Backend con Node.js: Base de Datos con PostgreSQL",
+        description: "Curso de base de datos con PostgreSQL para backend con Node.js"
+      },
+      react_advanced: {
+        title: "Curso de React Avanzado",
+        description: "Curso avanzado de React"
+      },
+      mongodb_basics: {
+        title: "M001: MongoDB Basics",
+        description: "Curso básico de MongoDB"
+      },
+      mongodb_sql_pros: {
+        title: "M100: MongoDB for SQL Pros",
+        description: "Curso para profesionales de SQL para aprender MongoDB"
+      },
+      mongodb_cluster_admin: {
+        title: "M103: Basic Cluster Administration",
+        description: "Curso sobre administración básica de clústeres en MongoDB"
+      },
+      laravel_professional: {
+        title: "Laravel 8 Professional Course",
+        description: "Curso profesional de Laravel 8"
+      },
+      react_professional: {
+        title: "React Professional Course",
+        description: "Professional course in React.js"
+      },
+      react_router_v6: {
+        title: "React Router V6",
+        description: "Course on React Router V6"
+      },
+      vue_professional: {
+        title: "Vue Professional Course",
+        description: "Professional course in Vue.js"
+      },
+      web_accessibility: {
+        title: "Web Accessibility Course",
+        description: "Course on web accessibility"
+      },
+      bootstrap_4: {
+        title: "Bootstrap 4 ultimate Course",
+        description: "Ultimate course on Bootstrap 4"
+      },
+      typescript_complete: {
+        title: "Typescript from 0 to 100",
+        description: "Complete course on Typescript"
+      },
+      laravel_aws: {
+        title: "Laravel 8 in AWS",
+        description: "Course on Laravel 8 deployment in AWS"
+      },
+      jsf_course: {
+        title: "Curso JavaServer Faces",
+        description: "Course on JavaServer Faces"
+      },
+      hibernate_jpa: {
+        title: "Hibernate y JPA",
+        description: "Course on Hibernate and JPA"
+      },
+      javascript_professional: {
+        title: "JavaScript Profesional",
+        description: "Professional course on JavaScript"
+      },
+      java_web_developer: {
+        title: "Programador Java Web",
+        description: "Course for Java Web Developers"
+      },
+      git_course: {
+        title: "Curso de Git",
+        description: "Curso sobre control de versiones con Git"
+      },
+      python_3: {
+        title: "Python 3",
+        description: "Curso de programación en Python 3"
+      },
+      java_8_basics: {
+        title: "Java 8 desde Cero",
+        description: "Curso de programación Java 8 desde fundamentos"
+      },
+      java_8_advanced: {
+        title: "Java 8 para programadores Java",
+        description: "Curso avanzado de Java 8 para desarrolladores"
+      },
+      ruby_basics: {
+        title: "Ruby desde Cero",
+        description: "Curso de programación Ruby desde fundamentos"
       },
     },
     projects: {
@@ -379,79 +401,101 @@ export const translations = {
       date: "Fecha",
       academy: "Academia",
       verify: "Ver Certificado",
-      badges: {
-        aws: {
-          name: "AWS Certified Solutions Architect - Associate",
-          academy: "Amazon Web Services",
-          issuer: "AWS Training and Certification",
-          date: "2023",
-          description: "Valida la experiencia en el diseño y despliegue de sistemas escalables en AWS. Cubre servicios de cómputo, redes, almacenamiento y bases de datos con enfoque en optimización de costos y seguridad.",
-          image: "/certifications/aws.webp",
-          link: "https://aws.amazon.com/certification/certified-solutions-architect-associate/",
-        },
-        docker: {
-          name: "Docker Certified Associate",
-          academy: "Docker Inc.",
-          issuer: "Programa de Certificación Docker",
-          date: "2022",
-          description: "Demuestra competencia en tecnología de contenedorización Docker, incluyendo orquestación de contenedores, redes, seguridad y Docker Compose para aplicaciones multi-contenedor.",
-          image: "/certifications/docker.webp",
-          link: "https://training.mirantis.com/certification/dca-certification-exam/",
-        },
-        react: {
-          name: "Certificado Profesional de Desarrollador Front-End de Meta",
-          academy: "Meta",
-          issuer: "Meta vía Coursera",
-          date: "2023",
-          description: "Programa integral que cubre React, JavaScript ES6+, HTML/CSS, principios de diseño UI/UX y prácticas modernas de desarrollo front-end para crear aplicaciones web responsivas.",
-          image: "/certifications/meta.webp",
-          link: "https://www.coursera.org/professional-certificates/meta-front-end-developer",
-        },
-        gcp: {
-          name: "Google Cloud Professional Developer",
-          academy: "Google Cloud",
-          issuer: "Google Cloud Training",
-          date: "2023",
-          description: "Valida habilidades en el diseño, construcción y despliegue de aplicaciones en Google Cloud Platform, incluyendo desarrollo cloud-native y arquitectura de microservicios.",
-          image: "/certifications/google.webp",
-          link: "https://cloud.google.com/certification/cloud-developer",
-        },
-        azure: {
-          name: "Microsoft Azure Developer Associate",
-          academy: "Microsoft",
-          issuer: "Microsoft Learn",
-          date: "2022",
-          description: "Demuestra experiencia en el desarrollo de soluciones para Azure, incluyendo soluciones de cómputo, almacenamiento de Azure, implementación de seguridad, monitoreo y resolución de problemas.",
-          image: "/certifications/microsoft.webp",
-          link: "https://docs.microsoft.com/en-us/certifications/azure-developer/",
-        },
-        kubernetes: {
-          name: "Certified Kubernetes Application Developer",
-          academy: "Cloud Native Computing Foundation",
-          issuer: "CNCF",
-          date: "2023",
-          description: "Valida habilidades en el diseño y despliegue de aplicaciones cloud-native para Kubernetes, incluyendo gestión del ciclo de vida de aplicaciones y resolución de problemas.",
-          image: "/certifications/kubernetes.webp",
-          link: "https://training.linuxfoundation.org/certification/certified-kubernetes-application-developer-ckad/",
-        },
-        fullstack: {
-          name: "Bootcamp de Desarrollo Web Full Stack",
-          academy: "The Odin Project",
-          issuer: "The Odin Project",
-          date: "2021",
-          description: "Programa intensivo que cubre desarrollo full-stack con HTML, CSS, JavaScript, Node.js, Express, MongoDB, React y flujos de trabajo de desarrollo modernos incluyendo Git y testing.",
-          image: "/certifications/coursera.webp",
-          link: "https://www.theodinproject.com/",
-        },
-        typescript: {
-          name: "Entrenamiento Esencial de TypeScript",
-          academy: "LinkedIn Learning",
-          issuer: "LinkedIn Learning",
-          date: "2022",
-          description: "Entrenamiento integral en fundamentos de TypeScript, tipos avanzados, genéricos, decoradores e integración con frameworks populares como React y Node.js.",
-          image: "/certifications/udemy.webp",
-          link: "https://www.linkedin.com/learning/typescript-essential-training",
-        },
+      backend_nodejs_api_rest: {
+        title: "Backend con Node.js: API REST con Express.js",
+        description: "Curso sobre backend con Node.js y Express.js"
+      },
+      backend_nodejs_auth: {
+        title: "Curso de Backend con Node.js: Autenticación con Passport.js y JWT",
+        description: "Curso sobre autenticación en backend con Passport.js y JWT"
+      },
+      backend_nodejs_postgresql: {
+        title: "Curso de Backend con Node.js: Base de Datos con PostgreSQL",
+        description: "Curso de base de datos con PostgreSQL para backend con Node.js"
+      },
+      react_advanced: {
+        title: "Curso de React Avanzado",
+        description: "Curso avanzado de React"
+      },
+      mongodb_basics: {
+        title: "M001: MongoDB Básico",
+        description: "Curso básico de MongoDB"
+      },
+      mongodb_sql_pros: {
+        title: "M100: MongoDB para Profesionales SQL",
+        description: "Curso para profesionales de SQL para aprender MongoDB"
+      },
+      mongodb_cluster_admin: {
+        title: "M103: Administración Básica de Clústeres",
+        description: "Curso sobre administración básica de clústeres en MongoDB"
+      },
+      laravel_professional: {
+        title: "Curso Profesional de Laravel 8",
+        description: "Curso profesional de Laravel 8"
+      },
+      react_professional: {
+        title: "Curso Profesional de React",
+        description: "Curso profesional de React.js"
+      },
+      react_router_v6: {
+        title: "React Router V6",
+        description: "Curso sobre React Router V6"
+      },
+      vue_professional: {
+        title: "Curso Profesional de Vue",
+        description: "Curso profesional de Vue.js"
+      },
+      web_accessibility: {
+        title: "Curso de Accesibilidad Web",
+        description: "Curso sobre accesibilidad web"
+      },
+      bootstrap_4: {
+        title: "Curso Definitivo de Bootstrap 4",
+        description: "Curso definitivo sobre Bootstrap 4"
+      },
+      typescript_complete: {
+        title: "Typescript de 0 a 100",
+        description: "Curso completo de Typescript"
+      },
+      laravel_aws: {
+        title: "Laravel 8 en AWS",
+        description: "Curso sobre despliegue de Laravel 8 en AWS"
+      },
+      jsf_course: {
+        title: "Curso JavaServer Faces",
+        description: "Curso sobre JavaServer Faces"
+      },
+      hibernate_jpa: {
+        title: "Hibernate y JPA",
+        description: "Curso sobre Hibernate y JPA"
+      },
+      javascript_professional: {
+        title: "JavaScript Profesional",
+        description: "Curso profesional de JavaScript"
+      },
+      java_web_developer: {
+        title: "Programador Java Web",
+        description: "Curso para Desarrolladores Java Web"
+      },
+      git_course: {
+        title: "Curso de Git",
+        description: "Curso sobre control de versiones con Git"
+      },
+      python_3: {
+        title: "Python 3",
+        description: "Curso de programación en Python 3"
+      },
+      java_8_basics: {
+        title: "Java 8 desde Cero",
+        description: "Curso de programación Java 8 desde fundamentos"
+      },
+      java_8_advanced: {
+        title: "Java 8 para programadores Java",
+        description: "Curso avanzado de Java 8 para desarrolladores"
+      },
+      ruby_basics: {
+        title: "Ruby desde Cero",
+        description: "Curso de programación Ruby desde fundamentos"
       },
     },
     projects: {
