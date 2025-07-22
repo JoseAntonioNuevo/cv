@@ -2,7 +2,7 @@
 
 A modern, multilingual CV/Resume website built with cutting-edge web technologies, featuring full internationalization, dark mode, responsive design, and professional contact functionality.
 
-**Live Website**: [Portfolio URL]  
+**Live Website**:[https://joseantonionuevo.tech]
 **LinkedIn**: [https://www.linkedin.com/in/jose-antonio-nuevo/](https://www.linkedin.com/in/jose-antonio-nuevo/)  
 **GitHub**: [https://github.com/JoseAntonioNuevo](https://github.com/JoseAntonioNuevo)
 
@@ -11,6 +11,7 @@ A modern, multilingual CV/Resume website built with cutting-edge web technologie
 This is a fully-developed, professional CV website showcasing 5+ years of experience as a Tech Lead & Full Stack Developer. The site demonstrates expertise in modern web development practices with a focus on performance, accessibility, and user experience.
 
 ### Key Highlights
+
 - 🌐 **Bilingual Support**: English and Spanish with clean URL routing
 - 🎨 **Modern Design**: Dark/Light mode with smooth transitions
 - 📱 **Fully Responsive**: Mobile-first design approach
@@ -22,21 +23,25 @@ This is a fully-developed, professional CV website showcasing 5+ years of experi
 ## 🛠️ Tech Stack
 
 ### Core Framework
+
 - **Astro v5.12.0** - Static site generator with SSR capabilities
 - **React v19.1.0** - Interactive components
 - **TypeScript v5.8.3** - Type-safe development
 
 ### Styling & UI
+
 - **Tailwind CSS v3.4.0** - Utility-first CSS framework
 - **React Icons v5.5.0** - Comprehensive icon library
 - **Custom Components** - Reusable Astro and React components
 
 ### Development Tools
+
 - **Bun** - Fast package manager and runtime
 - **@astrojs/check** - TypeScript and Astro checking
 - **Hot Module Replacement** - Fast development experience
 
 ### Communication
+
 - **MailerSend API** - Professional email service integration
 - **Custom Contact Form** - Form validation and submission
 
@@ -93,38 +98,44 @@ cv/
 ## 🌐 Internationalization System
 
 ### Language Support
+
 - **English** (default): `/`
 - **Spanish**: `/es/`
 
 ### Translation Architecture
+
 - **Strongly Typed**: Full TypeScript support for translation keys
 - **Nested Structure**: Organized by sections (nav, hero, experience, etc.)
 - **Dynamic Loading**: Language detection from URL
 - **SEO Optimized**: Proper hreflang tags and localized content
 
 ### Usage Example
+
 ```typescript
-import { useTranslations } from '../i18n/utils';
+import { useTranslations } from "../i18n/utils";
 
 const t = useTranslations(lang);
-const title = t('hero.greeting'); // "Hello, I'm" or "Hola, soy"
+const title = t("hero.greeting"); // "Hello, I'm" or "Hola, soy"
 ```
 
 ## 🎨 Design System
 
 ### Dark Mode Implementation
+
 - **Class-based Toggle**: `dark:` prefix for dark variants
 - **localStorage Persistence**: Remembers user preference
 - **System Preference Detection**: Respects OS dark mode setting
 - **Smooth Transitions**: 300ms duration for all theme changes
 
 ### Color Palette
+
 - **Primary**: Indigo/Blue accent colors
 - **Neutral**: Gray scales for text and backgrounds
 - **Interactive**: Hover states and focus indicators
 - **Semantic**: Success, warning, and error states
 
 ### Responsive Breakpoints
+
 - **Mobile First**: Base styles for mobile devices
 - **Tablet**: `md:` prefix (768px+)
 - **Desktop**: `lg:` prefix (1024px+)
@@ -133,7 +144,9 @@ const title = t('hero.greeting'); // "Hello, I'm" or "Hola, soy"
 ## 📱 Component Architecture
 
 ### Astro Components (.astro)
+
 Server-side rendered components for static content:
+
 - **Header**: Navigation with language switcher
 - **Hero**: Landing section with CTA buttons
 - **Experience**: Career timeline with company details
@@ -144,12 +157,15 @@ Server-side rendered components for static content:
 - **Footer**: Site information
 
 ### React Components (.tsx)
+
 Interactive components requiring client-side functionality:
+
 - **ThemeToggle**: Dark/light mode switch with animations
 - **CertificationsCarousel**: Touch-enabled certification slider
 - **LanguageSwitcher**: Language selection dropdown
 
 ### Hydration Strategy
+
 - **Selective Hydration**: Only interactive components use `client:load`
 - **Performance Optimized**: Minimal JavaScript on the client
 - **SEO Friendly**: Server-side rendered content
@@ -157,18 +173,22 @@ Interactive components requiring client-side functionality:
 ## 💼 Professional Content
 
 ### Work Experience
+
 **Current Position**: Tech Lead at Recovo (Feb 2025 - Present)
+
 - Leading sustainable fashion technology platform
 - Managing cross-functional development teams
 - Architecting scalable systems and microservices
 
 **Previous Roles**:
+
 - Full Stack Engineer at Recovo (Oct 2022 - Feb 2025)
 - Tech Lead at Acceleralia (Jan 2022 - Oct 2022)
 - Full Stack Engineer at Acceleralia (Aug 2020 - Jan 2022)
 - Part-time Developer at Acceleralia (Oct 2022 - Jul 2025)
 
 ### Technical Expertise
+
 - **Frontend**: React, Next.js 15, TypeScript, Vue.js, Tailwind CSS
 - **Backend**: Node.js, Laravel, Python, PHP
 - **Databases**: PostgreSQL, MySQL, MongoDB, Redis
@@ -176,13 +196,16 @@ Interactive components requiring client-side functionality:
 - **Testing**: Unit testing, Integration testing, TDD practices
 
 ### Education
+
 - **FullStack Web Masters** - ThreePoints (2022)
 - **Higher Degree in Multiplatform Application Development** - UOC (2021)
 - **Higher Degree in Web Application Development** - Jesuïtes Bellvitge (2020)
 - **Bachillerato (Scientific-Technological)** - Jesuïtes Bellvitge (2018)
 
 ### Certifications (22+ Certifications)
+
 Professional certifications from leading platforms:
+
 - **Platzi**: Backend Node.js, React Advanced
 - **MongoDB University**: M001, M100, M103
 - **Udemy**: TypeScript, Bootstrap, Laravel AWS
@@ -192,12 +215,14 @@ Professional certifications from leading platforms:
 ## 📧 Contact Integration
 
 ### Email System
+
 - **MailerSend API**: Professional email service
 - **Form Validation**: Client and server-side validation
 - **Error Handling**: Comprehensive error messages
 - **Security**: API key protection and rate limiting
 
 ### Contact Methods
+
 - **Email**: joseantonio.nuevo@gmail.com
 - **LinkedIn**: Professional networking
 - **GitHub**: Code repositories
@@ -231,12 +256,14 @@ bun astro -- --help
 ## ⚡ Performance Features
 
 ### Build Optimization
+
 - **Static Site Generation**: Pre-rendered HTML pages
 - **Code Splitting**: Automatic JavaScript chunking
 - **Image Optimization**: WebP format for images
 - **CSS Optimization**: Tailwind purging unused styles
 
 ### SEO Implementation
+
 - **Meta Tags**: Complete Open Graph and Twitter Card tags
 - **Structured Data**: JSON-LD schema markup
 - **Canonical URLs**: Proper canonical link relations
@@ -244,6 +271,7 @@ bun astro -- --help
 - **Hreflang Tags**: International SEO support
 
 ### Accessibility
+
 - **Semantic HTML**: Proper heading hierarchy
 - **ARIA Labels**: Screen reader support
 - **Keyboard Navigation**: Full keyboard accessibility
@@ -253,26 +281,29 @@ bun astro -- --help
 ## 🔧 Configuration Files
 
 ### Astro Configuration (astro.config.mjs)
+
 ```javascript
 export default defineConfig({
   integrations: [react(), tailwind()],
-  output: 'server',
+  output: "server",
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en', 'es'],
+    defaultLocale: "en",
+    locales: ["en", "es"],
     routing: {
-      prefixDefaultLocale: false
-    }
-  }
+      prefixDefaultLocale: false,
+    },
+  },
 });
 ```
 
 ### TypeScript Configuration
+
 - Extends Astro's strict preset
 - React JSX configuration
 - Type-safe imports and exports
 
 ### Tailwind Configuration
+
 - Dark mode class strategy
 - Custom theme extensions
 - Comprehensive content scanning
@@ -280,30 +311,35 @@ export default defineConfig({
 ## 🌟 Key Features
 
 ### 1. Professional Design
+
 - Clean, modern interface
 - Consistent typography and spacing
 - Professional color scheme
 - Print-friendly styles
 
 ### 2. Technical Excellence
+
 - Type-safe development with TypeScript
 - Component-based architecture
 - Performance-optimized builds
 - SEO best practices
 
 ### 3. User Experience
+
 - Fast loading times
 - Smooth animations and transitions
 - Intuitive navigation
 - Mobile-optimized interface
 
 ### 4. Content Management
+
 - Structured JSON data
 - Easy content updates
 - Multilingual support
 - Rich media integration
 
 ### 5. Professional Communication
+
 - Working contact form
 - Professional email templates
 - Multiple contact methods
@@ -327,6 +363,7 @@ MAILERSEND_FROM_EMAIL=your_verified_domain@example.com
 ## 🤝 Professional Services
 
 Available for:
+
 - **Freelance Development**: Full-stack web applications
 - **Technical Consulting**: Architecture and technology decisions
 - **Team Leadership**: Tech lead and mentoring roles
@@ -343,4 +380,4 @@ Interested in collaborating or have a project in mind? I'm always open to discus
 
 ---
 
-*Built with ❤️ using Astro, React, TypeScript, and Tailwind CSS*
+_Built with ❤️ using Astro, React, TypeScript, and Tailwind CSS_
