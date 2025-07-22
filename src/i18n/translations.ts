@@ -14,7 +14,7 @@ export const translations = {
       greeting: "Hello, I'm",
       role: "Full Stack Developer",
       description:
-        "Experienced Tech Lead & Full Stack Developer specializing in scalable web applications. Expert in React, Next.js, TypeScript, Python, Laravel, Node.js, and modern testing practices. Proficient with PostgreSQL, Docker, and cloud deployments. Passionate about clean code, performance optimization, and delivering exceptional user experiences. Freelance developer actively seeking new opportunities to build innovative solutions.",
+        "Experienced Tech Lead & Full Stack Developer with +5 years of experience specializing in scalable web applications. Expert in React, Next.js, TypeScript, Python, Laravel, Node.js, and modern testing practices.<br><br>Passionate about clean code, performance optimization, and delivering exceptional user experiences.<br><br>Freelance developer with proven tech lead experience, available for freelance opportunities anytime to build innovative solutions.",
       downloadCV: "Download CV",
       contactMe: "Contact Me",
     },
@@ -292,7 +292,7 @@ export const translations = {
       greeting: "Hola, soy",
       role: "Desarrollador Full Stack",
       description:
-        "Tech Lead y Desarrollador Full Stack experimentado, especializado en aplicaciones web escalables. Experto en React, Next.js, TypeScript, Python, Laravel, Node.js y prácticas modernas de testing. Dominio de PostgreSQL, Docker y despliegues en la nube. Apasionado por el código limpio, optimización del rendimiento y crear experiencias de usuario excepcionales. Desarrollador freelance buscando activamente nuevas oportunidades para construir soluciones innovadoras.",
+        "Tech Lead y Desarrollador Full Stack con +5 años de experiencia, especializado en aplicaciones web escalables. Experto en React, Next.js, TypeScript, Python, Laravel, Node.js y prácticas modernas de testing.<br><br>Apasionado por el código limpio, optimización del rendimiento y crear experiencias de usuario excepcionales.<br><br>Desarrollador freelance con experiencia comprobada como tech lead, disponible para oportunidades freelance en cualquier momento para construir soluciones innovadoras.",
       downloadCV: "Descargar CV",
       contactMe: "Contáctame",
     },
