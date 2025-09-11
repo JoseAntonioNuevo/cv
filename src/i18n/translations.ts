@@ -241,6 +241,12 @@ export const translations = {
             "Modern web-based board game built with Next.js. Features real-time gameplay, responsive design, game state management, and smooth animations for an engaging user experience.",
           technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
         },
+        webdevfactory: {
+          title: "WebDevFactory.dev",
+          description:
+            "Founder & CTO of WebDevFactory. Leading AI-powered digital transformation through custom RAG pipelines, LLM integration, and full-stack solutions. Architecting scalable, intelligent technology products that deliver clear ROI for enterprise clients.",
+          technologies: ["AI/LLM", "RAG", "Full-Stack", "Cloud Architecture", "Automation"],
+        },
       },
     },
     contact: {
@@ -521,6 +527,12 @@ export const translations = {
           description:
             "Juego de mesa moderno basado en web construido con Next.js. Incluye juego en tiempo real, diseño responsivo, gestión del estado del juego y animaciones fluidas para una experiencia de usuario atractiva.",
           technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+        },
+        webdevfactory: {
+          title: "WebDevFactory.dev",
+          description:
+            "Fundador y CTO de WebDevFactory. Liderando la transformación digital con IA mediante pipelines RAG personalizados, integración de LLM y soluciones full-stack. Arquitectura de productos tecnológicos escalables e inteligentes que ofrecen un ROI claro para clientes empresariales.",
+          technologies: ["AI/LLM", "RAG", "Full-Stack", "Cloud Architecture", "Automation"],
         },
       },
     },
