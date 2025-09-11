@@ -47,7 +47,7 @@ This is a fully-developed, professional CV website showcasing 5+ years of experi
 
 ## 📁 Project Architecture
 
-```
+````
 ```text
 cv/
 ├── public/                          # Static assets
@@ -56,7 +56,7 @@ cv/
 │   ├── education/                   # Institution logos
 │   ├── experience/                  # Company logos
 │   ├── portfolio/                   # Project screenshots
-│   └── me.jpeg                      # Profile photo
+│   └── me.png                      # Profile photo
 ├── src/
 │   ├── components/                  # Reusable components
 │   │   ├── Certifications.astro     # Certifications carousel
@@ -94,7 +94,7 @@ cv/
 ├── tsconfig.json                    # TypeScript configuration
 ├── package.json                     # Dependencies and scripts
 └── bun.lock                         # Lockfile
-```
+````
 
 ## 🌐 Internationalization System
 
