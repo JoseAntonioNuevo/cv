@@ -17,6 +17,15 @@ interface Project {
 function getProjects(t: any): Project[] {
   return [
     {
+      title: t('projects.portfolio.jaChatbot.title'),
+      description: t('projects.portfolio.jaChatbot.description'),
+      technologies: t('projects.portfolio.jaChatbot.technologies'),
+      githubUrl: 'https://github.com/JoseAntonioNuevo/JoseAntonioNuevo-Chat',
+      liveUrl: 'https://chat.joseantonionuevo.tech',
+      image: '🤖',
+      color: 'from-green-500 to-teal-600'
+    },
+    {
       title: t('projects.portfolio.webdevfactory.title'),
       description: t('projects.portfolio.webdevfactory.description'),
       technologies: t('projects.portfolio.webdevfactory.technologies'),
@@ -40,15 +49,6 @@ function getProjects(t: any): Project[] {
       liveUrl: 'https://board-game.joseantonionuevo.tech',
       image: '🎮',
       color: 'from-blue-500 to-purple-600'
-    },
-    {
-      title: t('projects.portfolio.jaChatbot.title'),
-      description: t('projects.portfolio.jaChatbot.description'),
-      technologies: t('projects.portfolio.jaChatbot.technologies'),
-      githubUrl: 'https://github.com/JoseAntonioNuevo/ja-chat',
-      liveUrl: 'https://chat.joseantonionuevo.tech',
-      image: '🤖',
-      color: 'from-green-500 to-teal-600'
     }
   ];
 }
