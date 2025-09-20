@@ -9,6 +9,7 @@ import Experience from '../components/Experience.astro';
 import Studies from '../components/Studies.astro';
 import Portfolio from '../components/Portfolio.astro';
 import Certifications from '../components/Certifications.astro';
+import ChatbotModal from '../components/ChatbotModal.tsx';
 
 export interface Props {
   title: string;
@@ -104,6 +105,7 @@ const ogImage = `${siteUrl}/me.png`;
     <Portfolio />
     <Contact />
     <Footer />
+    <ChatbotModal client:load />
   </body>
 </html>
 
