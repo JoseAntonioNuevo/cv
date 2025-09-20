@@ -247,6 +247,12 @@ export const translations = {
             "Founder & CTO of WebDevFactory. Leading AI-powered digital transformation through custom RAG pipelines, LLM integration, and full-stack solutions. Architecting scalable, intelligent technology products that deliver clear ROI for enterprise clients.",
           technologies: ["AI/LLM", "RAG", "Full-Stack", "Cloud Architecture", "Automation"],
         },
+        jaChatbot: {
+          title: "Jose Antonio Nuevo Chatbot",
+          description:
+            "AI-powered chatbot built with Next.js that provides intelligent conversations about Jose Antonio Nuevo's work and CV. Features advanced AI integration using Vercel SDK, responsive design with Tailwind CSS, and seamless user interaction for professional inquiries.",
+          technologies: ["Next.js", "AI", "Vercel SDK", "Tailwind CSS", "TypeScript"],
+        },
       },
     },
     contact: {
@@ -533,6 +539,12 @@ export const translations = {
           description:
             "Fundador y CTO de WebDevFactory. Liderando la transformación digital con IA mediante pipelines RAG personalizados, integración de LLM y soluciones full-stack. Arquitectura de productos tecnológicos escalables e inteligentes que ofrecen un ROI claro para clientes empresariales.",
           technologies: ["AI/LLM", "RAG", "Full-Stack", "Cloud Architecture", "Automation"],
+        },
+        jaChatbot: {
+          title: "Chatbot Jose Antonio Nuevo",
+          description:
+            "Chatbot impulsado por IA construido con Next.js que proporciona conversaciones inteligentes sobre el trabajo y CV de Jose Antonio Nuevo. Cuenta con integración avanzada de IA usando Vercel SDK, diseño responsivo con Tailwind CSS, y interacción fluida para consultas profesionales.",
+          technologies: ["Next.js", "IA", "Vercel SDK", "Tailwind CSS", "TypeScript"],
         },
       },
     },
