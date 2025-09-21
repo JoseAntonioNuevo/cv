@@ -14,7 +14,7 @@ export const translations = {
       greeting: "Hello, I'm",
       role: "Full Stack Developer",
       description:
-        "Experienced Tech Lead & Full Stack Developer with +5 years of experience specializing in scalable web applications. Expert in React, Next.js, TypeScript, Python, Laravel, Node.js, and modern testing practices.<br><br>Passionate about clean code, performance optimization, and delivering exceptional user experiences.<br><br>Freelance developer with proven tech lead experience, available for freelance opportunities anytime to build innovative solutions.",
+        "Experienced Tech Lead & Full Stack Developer with +5 years of experience specializing in scalable web applications and AI solutions. Expert in React, Next.js, TypeScript, Python, Laravel, Node.js, and modern testing practices.<br><br>Specialized in AI integration, custom RAG (Retrieval-Augmented Generation) systems, LLM implementations, and machine learning pipelines. Passionate about leveraging artificial intelligence to enhance user experiences and business intelligence.<br><br>Freelance developer with proven tech lead experience, available for freelance opportunities anytime to build innovative solutions combining traditional web development with cutting-edge AI technologies.",
       downloadCV: "Download CV",
       contactMe: "Contact Me",
     },
@@ -28,6 +28,30 @@ export const translations = {
       current: "Current",
       responsibilities: "Responsibilities",
       companies: {
+        freelance: {
+          location: "Barcelona, Spain - Remote",
+          positions: {
+            ai_architect: "Freelance FullStack Development",
+          },
+          descriptions: {
+            ai_architect: "Developing comprehensive web solutions across the full technology stack, from modern frontend interfaces to robust backend systems and AI integrations.",
+          },
+          achievements: {
+            ai_architect: "Developing end-to-end web applications using modern technologies including React, Next.js, and TypeScript for dynamic frontend experiences. Building scalable backend solutions with Node.js, Python, and Laravel frameworks, ensuring optimal performance and maintainability. Implementing artificial intelligence solutions including custom RAG systems, LLM integrations, and machine learning pipelines for enhanced user experiences. Deploying and managing cloud infrastructure on AWS, optimizing for scalability, security, and cost-effectiveness. Collaborating with diverse clients to deliver tailored solutions that meet specific business requirements and drive digital transformation.",
+          },
+        },
+        webdevfactory: {
+          location: "Barcelona, Spain - Remote",
+          positions: {
+            founder_cto: "Founder & CTO",
+          },
+          descriptions: {
+            founder_cto: "Founded a technology consultancy to deliver bespoke AI and web solutions, leading all aspects of business strategy, client acquisition, and product development.",
+          },
+          achievements: {
+            founder_cto: "Founded a tech consultancy to deliver bespoke AI and web solutions, leading all aspects of business strategy, client acquisition, and product development. Defined the complete technical vision and architecture for client projects, ensuring solutions are scalable, secure, and aligned with business goals. Built strategic partnerships with technology vendors and established processes for rapid prototyping and deployment. Developed comprehensive service offerings including RAG systems, LLM integration, full-stack development, and cloud architecture consulting.",
+          },
+        },
         recovo: {
           location: "Barcelona, Spain - Hybrid",
           positions: {
@@ -307,7 +331,7 @@ export const translations = {
       greeting: "Hola, soy",
       role: "Desarrollador Full Stack",
       description:
-        "Tech Lead y Desarrollador Full Stack con +5 años de experiencia, especializado en aplicaciones web escalables. Experto en React, Next.js, TypeScript, Python, Laravel, Node.js y prácticas modernas de testing.<br><br>Apasionado por el código limpio, optimización del rendimiento y crear experiencias de usuario excepcionales.<br><br>Desarrollador freelance con experiencia comprobada como tech lead, disponible para oportunidades freelance en cualquier momento para construir soluciones innovadoras.",
+        "Tech Lead y Desarrollador Full Stack con +5 años de experiencia, especializado en aplicaciones web escalables y soluciones de IA. Experto en React, Next.js, TypeScript, Python, Laravel, Node.js y prácticas modernas de testing.<br><br>Especializado en integración de IA, sistemas RAG (Generación Aumentada por Recuperación) personalizados, implementaciones LLM y pipelines de machine learning. Apasionado por aprovechar la inteligencia artificial para mejorar experiencias de usuario e inteligencia empresarial.<br><br>Desarrollador freelance con experiencia comprobada como tech lead, disponible para oportunidades freelance en cualquier momento para construir soluciones innovadoras que combinan desarrollo web tradicional con tecnologías de IA de vanguardia.",
       downloadCV: "Descargar CV",
       contactMe: "Contáctame",
     },
@@ -321,6 +345,30 @@ export const translations = {
       current: "Actual",
       responsibilities: "Responsabilidades",
       companies: {
+        freelance: {
+          location: "Barcelona, España - Remoto",
+          positions: {
+            ai_architect: "Desarrollo FullStack Freelance",
+          },
+          descriptions: {
+            ai_architect: "Desarrollo de soluciones web integrales a través de todo el stack tecnológico, desde interfaces frontend modernas hasta sistemas backend robustos e integraciones de IA.",
+          },
+          achievements: {
+            ai_architect: "Desarrollo de aplicaciones web end-to-end utilizando tecnologías modernas incluyendo React, Next.js y TypeScript para experiencias frontend dinámicas. Construcción de soluciones backend escalables con frameworks Node.js, Python y Laravel, asegurando rendimiento óptimo y mantenibilidad. Implementación de soluciones de inteligencia artificial incluyendo sistemas RAG personalizados, integraciones LLM y pipelines de machine learning para experiencias de usuario mejoradas. Despliegue y gestión de infraestructura en la nube en AWS, optimizando para escalabilidad, seguridad y costo-efectividad. Colaboración con clientes diversos para entregar soluciones a medida que cumplen requisitos empresariales específicos e impulsan la transformación digital.",
+          },
+        },
+        webdevfactory: {
+          location: "Barcelona, España - Remoto",
+          positions: {
+            founder_cto: "Fundador y CTO",
+          },
+          descriptions: {
+            founder_cto: "Fundé una consultoría tecnológica para entregar soluciones de IA y web a medida, liderando todos los aspectos de estrategia empresarial, adquisición de clientes y desarrollo de productos.",
+          },
+          achievements: {
+            founder_cto: "Fundé una consultoría tecnológica para entregar soluciones de IA y web a medida, liderando todos los aspectos de estrategia empresarial, adquisición de clientes y desarrollo de productos. Definí la visión técnica completa y arquitectura para proyectos de clientes, asegurando que las soluciones sean escalables, seguras y alineadas con objetivos empresariales. Construí alianzas estratégicas con proveedores de tecnología y establecí procesos para prototipado rápido y despliegue. Desarrollé ofertas de servicios integrales incluyendo sistemas RAG, integración de LLM, desarrollo full-stack y consultoría de arquitectura en la nube.",
+          },
+        },
         recovo: {
           location: "Barcelona, España - Híbrido",
           positions: {

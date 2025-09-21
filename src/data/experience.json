@@ -1,5 +1,37 @@
 [
   {
+    "company": "Freelance",
+    "locationKey": "experience.companies.freelance.location",
+    "logo": "/experience/freelance.webp",
+    "technologies": ["OpenAI", "Llama", "Mistral", "RAG", "AWS", "Python", "AI", "Machine Learning", "LLM"],
+    "positions": [
+      {
+        "titleKey": "experience.companies.freelance.positions.ai_architect",
+        "period": "Aug 2025 - Present",
+        "descriptionKey": "experience.companies.freelance.descriptions.ai_architect",
+        "achievementsKeys": [
+          "experience.companies.freelance.achievements.ai_architect"
+        ]
+      }
+    ]
+  },
+  {
+    "company": "WebDevFactory.dev",
+    "locationKey": "experience.companies.webdevfactory.location",
+    "logo": "/experience/webdevfactory.webp",
+    "technologies": ["AI", "Full-Stack", "Business Strategy", "Product Development", "Cloud Architecture", "RAG", "LLM"],
+    "positions": [
+      {
+        "titleKey": "experience.companies.webdevfactory.positions.founder_cto",
+        "period": "Mar 2025 - Present",
+        "descriptionKey": "experience.companies.webdevfactory.descriptions.founder_cto",
+        "achievementsKeys": [
+          "experience.companies.webdevfactory.achievements.founder_cto"
+        ]
+      }
+    ]
+  },
+  {
     "company": "Recovo",
     "locationKey": "experience.companies.recovo.location",
     "logo": "/experience/recovo.webp",
