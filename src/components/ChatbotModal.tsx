@@ -10,11 +10,22 @@ export default function ChatbotModal() {
     const isDevelopment = window.location.hostname === 'localhost';
     if (isDevelopment) {
       // En desarrollo, usa el puerto donde corre tu chatbot local
-      setChatbotUrl('http://localhost:3001/chat');
+      setChatbotUrl('http://localhost:3003/chat');
     } else {
       // En producción, usa la URL de tu chatbot desplegado
       setChatbotUrl('https://chat.joseantonionuevo.tech/chat');
     }
+
+    // Listen for custom event to open modal
+    const handleOpenModal = () => {
+      setIsOpen(true);
+    };
+
+    window.addEventListener('open-chatbot-modal', handleOpenModal);
+    
+    return () => {
+      window.removeEventListener('open-chatbot-modal', handleOpenModal);
+    };
   }, []);
 
   const toggleModal = () => {
